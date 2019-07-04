@@ -1,0 +1,20 @@
+#lista{
+    list-style: none;
+}
+
+.defined{
+    background: lightblue;
+    border: solid blueviolet;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+
+}
+.undefined {
+    visibility: hidden;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+}
