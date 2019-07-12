@@ -1,35 +1,171 @@
-const initialState = [
-    [undefined,undefined,1,1,1,undefined,undefined],
-    [undefined,undefined,1,1,1,undefined,undefined],
-    [1,1,1,1,1,1,1],
-    [1,1,1,0,1,1,1],
-    [1,1,1,1,1,1,1],
-    [undefined,undefined,1,1,1,undefined,undefined],
-    [undefined,undefined,1,1,1,undefined,undefined],
+
+
+var board=[
+  [, ,{value:1},{value:1}, {value:1}, , ],
+  [, ,{value:1},{value:1}, {value:1}, , ],
+  [{value:1}, {value:1}, {value:1}, {value:1}, {value:1}, {value:1},{value:1}],
+  [{value:1}, {value:1}, {value:1}, {value:0}, {value:1}, {value:1},{value:1}],
+  [{value:1}, {value:1}, {value:1}, {value:1}, {value:1}, {value:1},{value:1}],
+  [, ,{value:1},{value:1}, {value:1}, , ],
+  [, ,{value:1},{value:1}, {value:1}, , ]
 ];
 
-let dynamicBoard = '<ul id = "lista">';
+var selectedPeg={x:undefined, y:undefined}
+var createId= function(rowN, colN) {
+  return 'peg-'+rowN+'-'+colN
+}
 
-for(let  i=0; i < initialState.length;  i++){
-    dynamicBoard += '<li>';
-    for(let j=0; j < initialState[i].length; j++){
-        switch (initialState[i][j]){
-            case 1:
-                dynamicBoard += '<button class = "defined"></button>';
-                break;
-            case 0:
-            case undefined :
-            dynamicBoard += '<button class = "undefined"></button>';
-        }    
+
+var generateCell= function (cell, rowN, colN){
+  var html= '<button id="'+ createId(rowN, colN)+'" class="'
+  //evalua si existe y despues mira su valor si es 1 = true
+  if(cell && cell.value){
+    html+= 'peg'
+  }
+  else if (cell && cell.value==0){
+    html+= 'hole';
+  }
+  else {
+        html+= 'hidden'
+  }
+    html+= '"></button>'
+    console.log(html)
+    return html
+};
+
+
+var generateRow= function(row, rowN){
+  var html='<div class="row">'
+  for (var j=0;j < row.length; j++)
+  {
+    html +=generateCell(row[j],rowN, j)
+  }
+  html+= '</div>'
+  return html
+};
+
+
+var generateBoard=function(){
+  var html= '<div class="row">'
+  for (var i=0;i < board.length; i++)
+  {
+    html+=generateRow(board[i],i)
+  }
+  html +='</div>';
+  return html
+};
+
+var unselectPeg=function(){
+  if (selectedPeg.x!=undefined && selectedPeg.y!=undefined){
+    console.log(unselectPeg)
+    var prevSelectId=createId(selectedPeg.x, selectedPeg.y)
+    document.getElementById(prevSelectId).className='peg'
+    var suggestion= document.getElementsByClassName('suggestion')
+    for (var i=0;i < suggestion.length; i++)
+    {
+      suggestion[i].className='hole'
     }
-    dynamicBoard += '</li>';
+  }
 }
-dynamicBoard += '</ul>';
 
-window.onload = function(){
-// Obtenemos el elemento dibujado en el HTML
-const boardElement = document.getElementById('board')
-
-// Asignamos dynamicboard
-boardElement.innerHTML = dynamicBoard 
+var getElement= function(id){
+  var element=document.getElementById(id)
+  return element || {}
 }
+
+var showSuggestions=function(){
+  var near={
+    above:getElement(createId(selectedPeg.x -1, selectedPeg.y)),
+    left:getElement(createId(selectedPeg.x, selectedPeg.y-1)),
+    right:getElement(createId(selectedPeg.x , selectedPeg.y+1)),
+    bellow:getElement(createId(selectedPeg.x +1, selectedPeg.y)),
+  }
+  var possible={
+    above:getElement(createId(selectedPeg.x -2, selectedPeg.y)),
+    left:getElement(createId(selectedPeg.x, selectedPeg.y-2)),
+    right:getElement(createId(selectedPeg.x , selectedPeg.y+2)),
+    bellow:getElement(createId(selectedPeg.x +2, selectedPeg.y)),
+  }
+
+  if(near.above.className=='peg'&& possible.above.className=='hole')
+  {
+    possible.above.className='suggestion'
+  }
+  if(near.left.className=='peg'&& possible.left.className=='hole')
+  {
+    possible.left.className='suggestion'
+  }
+  if(near.right.className=='peg'&& possible.right.className=='hole')
+  {
+    possible.right.className='suggestion'
+  }
+  if(near.bellow.className=='peg'&& possible.bellow.className=='hole')
+  {
+    possible.bellow.className='suggestion'
+  }
+}
+
+var selectPeg=function(evt){
+  var peg=evt.target
+  //split pone las palabras separdas por guien en un array
+  var idParts=peg.id&&peg.id.length ? peg.id.split('-'):[]
+  if(idParts.length===3){
+    if(selectedPeg.x=== parseInt(idParts[1])&&selectedPeg.y=== parseInt(idParts[2])){
+      unselectPeg()
+      selectedPeg.x=undefined
+      selectedPeg.y=undefined
+    }
+    else {
+      unselectPeg()
+      selectedPeg.x=parseInt(idParts[1])
+      selectedPeg.y=parseInt(idParts[2])
+      peg.className='selected'
+      showSuggestions()
+    }
+
+  }
+}
+
+var addPegsEventHandlers=function(pegs){
+  for (var i=0;i < pegs.length; i++)
+  {
+    pegs[i].onclick=selectPeg
+  }
+
+}
+
+var generateHeader=function(){
+  var html = '<h1>Trabajo Final: Peg-Soliteaire</h1>'
+  return html
+}
+var generateFooter=function(){
+  var html = '<h1>Carracedo Gaston</h1>'
+  return html
+}
+
+ 
+
+var init= function(){
+  
+
+  var boardElement=document.getElementById('board')
+  boardElement.innerHTML=generateBoard()
+
+  var headerElement=document.getElementById('header')
+  headerElement.innerHTML=generateHeader()
+
+  var footerElement=document.getElementById('footer')
+  footerElement.innerHTML=generateFooter()
+
+  var pegs=boardElement.getElementsByClassName('peg')
+  addPegsEventHandlers(pegs)
+
+  
+  
+};
+window.onload=init
+
+alert("Hola David, preparate para la accion!")
+
+
+

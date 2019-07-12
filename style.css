@@ -1,20 +1,59 @@
-#lista{
-    list-style: none;
+
+body{
+  display:flex;
+  flex-direction:column;   
+  justify-content: space-around;
+  align-items: center;
+  background: url(img/madera.jpg);
+} 
+header, footer{
+  display: flex;
+  background-color: lightblue;
+  justify-content: center;
+  font-size: 40px;
+  font-style: italic;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+}
+.hole{
+  background-color: #041b24b6; 
 }
 
-.defined{
-    background: lightblue;
-    border: solid blueviolet;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    margin: 5px;
-
+.board{
+  display:flex;
+  align-items: center; 
+  border: solid 10px #55400767; 
+  background-color:  #5540073a; 
+  border-radius: 5px;
+  height: 77vh;
 }
-.undefined {
-    visibility: hidden;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    margin: 5px;
+
+.board button{
+  width: 3vw;
+  height: 3vw;
+  margin: 1vw;
+  border: 2px solid rgba(0, 0, 0, 0.678);
+  border-radius: 50px;
+}
+
+
+.board button.hidden{
+  visibility:hidden;
+}
+.board button.peg{
+  background-color: #3b88ec;
+}
+
+.board button.selected{
+  
+  background-color: #2d8dc591;
+}
+
+.board button.selected:active{
+  background-color: #3dc03dea;
+}
+
+.board button.suggestion{
+  background-color: rgba(110, 231, 94, 0.829);
 }
