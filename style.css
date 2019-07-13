@@ -7,6 +7,16 @@ body{
   background: url(img/madera.jpg);
 } 
 
+header{
+  position: fixed;
+  top: 0px;
+  left: 0px; 
+}
+footer{
+  position: fixed;
+  bottom: 0px;
+  left: 0px; 
+}
 .gif{
   width: 3vw;
 }
@@ -30,13 +40,16 @@ header, footer, .title{
   background-color: #041b24b6; 
 }
 
+
 .board{
   display:flex;
+  margin-top: 10vh;
+  position: relative;
   align-items: center; 
   border: solid 10px #55400767; 
   background-color:  #5540073a; 
   border-radius: 5px;
-  height: 77vh;
+  height: 77.5vh;
 }
 
 .board button{
@@ -67,3 +80,4 @@ header, footer, .title{
 .board button.suggestion{
   background-color: rgba(110, 231, 94, 0.829);
 }
+
