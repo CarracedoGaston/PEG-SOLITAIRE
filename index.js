@@ -135,7 +135,8 @@ var addPegsEventHandlers=function(pegs){
 }
 
 var generateHeader=function(){
-  var html = '<h1>Trabajo Final: Peg-Soliteaire</h1>'
+  var html = '</div><div class = "gif"><img src="img/jesus.gif" alt="" class= "gifjesus"> </div><div class = "title"> <h1>Trabajo Final: Peg-Soliteaire</h1> </div><div class = "gif"><img src="img/jesus.gif" alt="" class= "gifjesus"> </div>'
+              
   return html
 }
 var generateFooter=function(){
@@ -165,7 +166,7 @@ var init= function(){
 };
 window.onload=init
 
-alert("Hola David, preparate para la accion!")
+// alert("Hola David, preparate para la accion!")
 
 
 
