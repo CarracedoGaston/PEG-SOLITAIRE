@@ -135,7 +135,7 @@ var addPegsEventHandlers=function(pegs){
 }
 
 var generateHeader=function(){
-  var html = '</div><div class = "gif"><img src="img/jesus.gif" alt="" class= "gifjesus"> </div><div class = "title"> <h1>Trabajo Final: Peg-Soliteaire</h1> </div><div class = "gif"><img src="img/jesus.gif" alt="" class= "gifjesus"> </div>'
+  var html = '</div><div class = "gif"><img src="img/jesus.gif" alt="" class= "gifjesus"> </div><div class = "title"> <h1>Trabajo Final: Peg-Solitaire</h1> </div><div class = "gif"><img src="img/jesus.gif" alt="" class= "gifjesus"> </div>'
               
   return html
 }
