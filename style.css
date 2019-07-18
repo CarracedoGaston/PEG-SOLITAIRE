@@ -1,83 +1,92 @@
-
 body{
   display:flex;
   flex-direction:column;   
   justify-content: space-around;
   align-items: center;
-  background: url(img/madera.jpg);
-} 
+  background-color: black;
+}
 
-header{
-  position: fixed;
-  top: 0px;
-  left: 0px; 
+main{
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw;
 }
+
+.board{
+  background: url(img/madera.jpg) no-repeat;
+  background-size: cover;
+  border: solid 10px #FF9966; 
+  border-radius: 5px; 
+}
+
 footer{
-  position: fixed;
+  position: fixed; 
   bottom: 0px;
-  left: 0px; 
+  left: 0px;   
 }
-.gif{
-  width: 3vw;
-}
-.gifjesus{
-  height: 10vh;
-}
-.title{
-  width: 94vw;
-}
+
 header, footer, .title{
   display: flex;
-  background-color: #8cb0e0;
+  background-color: black;
   justify-content: center;
   font-size: 40px;
   font-style: italic;
   align-items: center;
   height: 10vh;
   width: 100vw;
-}
-.hole{
-  background-color: #041b24b6; 
-}
-
-
-.board{
-  display:flex;
-  margin-top: 10vh;
-  position: relative;
-  align-items: center; 
-  border: solid 10px #55400767; 
-  background-color:  #5540073a; 
-  border-radius: 5px;
-  height: 77.5vh;
+  color: #fff;
+	text-shadow:
+    0 0 5px rgba(0,178,255,1),
+    0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
 }
 
-.board button{
+.board button {
   width: 3vw;
   height: 3vw;
   margin: 1vw;
-  border: 2px solid rgba(0, 0, 0, 0.678);
+  border: 2px solid rgba(241, 217, 237, 0.952); 
   border-radius: 50px;
 }
 
-
 .board button.hidden{
-  visibility:hidden;
+  visibility: hidden;
 }
+
 .board button.peg{
-  background-color: #3b88ec;
+  background-color: #C39BD3;   
+}
+
+.board button.peg:hover{
+  background-color:rgb(108, 108, 155);
+}
+
+.board button.peg:active{
+background-color: #000066;
+}
+
+.board button.hole{
+  background-color:black;
+  border: 2px solid black; 
 }
 
 .board button.selected{
-  
-  background-color: #2d8dc591;
+  background-color:rgb(108, 108, 155); 
+} 
+
+.board button.suggestion {
+  background-color: rgba(103, 241, 126, 0.822);
 }
 
-.board button.selected:active{
-  background-color: #3dc03dea;
-}
 
-.board button.suggestion{
-  background-color: rgba(110, 231, 94, 0.829);
-}
+
 
