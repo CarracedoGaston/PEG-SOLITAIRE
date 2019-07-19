@@ -164,6 +164,10 @@ background-color: #000066;
     height: 50vw;
   }
 
+  #left{
+    margin-bottom: -15vh;
+    margin-top: -10vh;
+  }
   input{
     height: 3vh;;
     width: 50vw;
