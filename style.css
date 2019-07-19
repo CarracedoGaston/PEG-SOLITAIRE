@@ -8,17 +8,36 @@ body{
 
 main{
   display:  flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
   height: 80vh;
   width: 100vw;
 }
 
-.board{
+#left,  #right{
+  width: 50vw;
+  display: flex;
+  align-items: center; 
+  justify-content: center;  
+}
+
+input {
+width: 300px;
+box-sizing: border-box;
+margin-bottom: 5px;
+padding: 5px;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  width: 100%; 
+}
+#board{
   background: url(img/madera.jpg) no-repeat;
   background-size: cover;
-  border: solid 10px #FF9966; 
+  border: solid 10px rgb(129, 78, 52); 
   border-radius: 5px; 
+  
 }
 
 footer{
@@ -27,7 +46,7 @@ footer{
   left: 0px;   
 }
 
-header, footer, .title{
+header, footer{
   display: flex;
   background-color: black;
   justify-content: center;
@@ -51,9 +70,9 @@ header, footer, .title{
 }
 
 .board button {
-  width: 3vw;
-  height: 3vw;
-  margin: 1vw;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
   border: 2px solid rgba(241, 217, 237, 0.952); 
   border-radius: 50px;
 }
@@ -88,5 +107,76 @@ background-color: #000066;
 }
 
 
+@media only screen and (max-width: 987px) {
+  main {
+    flex-direction: column;
+  }
+  #left, #right{
+    width: 100vw;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+  #left{
+    height: 65vh;
+  }
+  #right{
+    height: 15vh;
+  }
+  .board button {
+    width: 35px;
+    height: 35px;
+    margin: 7px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  #left, #right{
+    width: 480px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+  #left{
+    height: 65vh;
+  }
+  #right{
+    height: 15vh;
+  }
+  .board button {
+    width: 35px;
+    height: 35px;
+    margin: 7px;
+  }
+  header, footer{
+    width: 480px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  
+  #left{
+    width: 480px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 80vh;
+  }
+  
+  #right{
+    display: none;
+  }
+  .board button {
+    width: 35px;
+    height: 35px;
+    margin: 7px;
+  }
+  header, footer{
+    width: 480px;
+  }
+}
 
 
