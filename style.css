@@ -27,7 +27,7 @@ margin-bottom: 5px;
 padding: 5px;
 }
 
-.button {
+#button {
   display: block;
   text-align: center;
   width: 100%; 
@@ -130,48 +130,22 @@ background-color: #000066;
   }
 }
 
-/* @media only screen and (max-width: 768px) {
-  main {
-    flex-direction: column;
-  }
+@media only screen and (max-width: 480px) { 
   #left, #right{
     width: 480px;
     display: flex;
     align-items: center; 
-    justify-content: center; 
+    justify-content: center;    
   }
-  #left{
-    height: 65vh;
-  }
+  
   #right{
     height: 15vh;
   }
-  .board button {
-    width: 35px;
-    height: 35px;
-    margin: 7px;
-  } */
-  /* header, footer{
-    width: 480px;
-  }
-} */
 
-@media only screen and (max-width: 480px) {
-  
-  #left, #right{
-    width: 480px;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    
-  }
-  
-  #right{
-    height: 15vh;
-  }
   #left{
     height: 65vh;
   }
+
   .board button {
     width: 35px;
     height: 35px;
@@ -182,30 +156,39 @@ background-color: #000066;
   }
 }
 @media screen and (device-width: 360px) {
-  #left{
+  #left, #right{
     width: 100vw;
     display: flex;
     align-items: center; 
     justify-content: center; 
+    height: 50vw;
   }
-  
-  #right{
-    height: 15vh;
-  }
-  input, button{
+
+  input{
     height: 3vh;;
     width: 50vw;
   }
+
   #left{
-    height: 65vh;
+    height: 80vh;
   }
 
- 
   .board button {
     width: 80px;
     height: 80px;
     margin: 20px;
   }
+
+  input, #button {
+    width: 90vw;
+    height: 4vh;
+    font-size: 3vh; 
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+
   header, footer{
     width: 100vw;
   }
