@@ -49,12 +49,11 @@ padding: 5px;
   width: 100%; 
 }
 #board{
-  background-color:rgba(128, 77, 35, 0.767);
-  /* background: url(img/madera.jpg) no-repeat; */
+  /* background: url(img/madera_prueba3.jpg) no-repeat ;   */
   background-size: cover;
-  /* border: solid 10px rgb(129, 78, 52);  */
   border: solid 10px rgba(179, 138, 196, 0.582); 
   border-radius: 5px; 
+  
   
 }
 
@@ -91,8 +90,7 @@ header, footer{
   width: 40px;
   height: 40px;
   margin: 10px;
-  /* border: 2px solid rgba(241, 217, 237, 0.952);  */
-  border: 3px solid rgba(83, 57, 68, 0.952); 
+  border: 3px solid black;  
   border-radius: 50px;
 }
 
@@ -101,20 +99,27 @@ header, footer{
 }
 
 .board button.peg{
-  background-color: #C39BD3;   
+  background-color: white;   
 }
 
 .board button.peg:hover{
   background-color:rgb(108, 108, 155);
 }
 
-.board button.peg:active{
-background-color: #000066;
-}
-
 .board button.hole{
   background-color:black;
-  border: 3px solid rgba(63, 53, 53, 0.952); 
+  border: 3px double white;
+  box-shadow:
+    0 0 5px rgba(0,178,255,1),
+    0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
 }
 
 .board button.selected{
@@ -123,6 +128,18 @@ background-color: #000066;
 
 .board button.suggestion {
   background-color: rgba(103, 241, 126, 0.822);
+  border: 3px double white;
+  box-shadow:
+    0 0 5px rgba(0,178,255,1),
+    0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
 }
 
 
