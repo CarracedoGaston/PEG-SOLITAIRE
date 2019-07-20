@@ -14,6 +14,10 @@ var selectedPeg = { x: undefined, y: undefined }
 
 var suggestions = []
 
+var score = 0
+
+var condScore = false
+
 var createId = function (rowN, colN) {
   return 'peg-' + rowN + '-' + colN
 }
@@ -137,6 +141,7 @@ var addPegsEventHandlers = function (pegs) {
 
 var movePeg = function (evt) {
   var id = evt.target.id
+  condScore = true
   var pos = getPositionFromId(id)
   if (pos.x !== undefined && pos.y !== undefined) {
       if (suggestions.includes(id)) {
@@ -154,6 +159,7 @@ var movePeg = function (evt) {
           init()
       }
   }
+  showsCore(condScore)
 }
 
 var addHolesEventHandlers = function (holes) {
@@ -163,6 +169,15 @@ var addHolesEventHandlers = function (holes) {
   }
 }
 
+var showsCore = function(condScore){
+    var html = ""
+    if(condScore == true){
+        score++
+        condScore = false
+        html = score.toString()
+    }
+    document.getElementById('scoreright').innerHTML = html
+}
 var init = function () {
   var boardElement = document.getElementById('board')
   boardElement.innerHTML = generateBoard()

@@ -20,6 +20,22 @@ main{
   justify-content: center;  
 }
 
+#score{
+display: flex;
+flex-direction: row;
+color: white;
+width: 300px;
+box-sizing: border-box;
+margin-bottom: 5px;
+padding-bottom: 20px;
+}
+#scoreleft{
+  width: 90%
+}
+#scoreright{
+  text-align: end;
+  width: 10%
+}
 input {
 width: 300px;
 box-sizing: border-box;
@@ -120,6 +136,9 @@ background-color: #000066;
   #left{
     height: 65vh;
   }
+  #score, input{
+    padding: 0px;
+    }
   #right{
     height: 15vh;
   }
@@ -183,7 +202,7 @@ background-color: #000066;
     margin: 20px;
   }
 
-  input, #button {
+  input, #button , #score{
     width: 90vw;
     height: 4vh;
     font-size: 3vh; 
@@ -191,7 +210,7 @@ background-color: #000066;
     margin-bottom: 5px;
     padding: 5px;
   }
-  
+
 
   header, footer{
     width: 100vw;
