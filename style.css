@@ -49,9 +49,11 @@ padding: 5px;
   width: 100%; 
 }
 #board{
-  background: url(img/madera.jpg) no-repeat;
+  background-color:rgba(128, 77, 35, 0.767);
+  /* background: url(img/madera.jpg) no-repeat; */
   background-size: cover;
-  border: solid 10px rgb(129, 78, 52); 
+  /* border: solid 10px rgb(129, 78, 52);  */
+  border: solid 10px rgba(179, 138, 196, 0.582); 
   border-radius: 5px; 
   
 }
@@ -89,7 +91,8 @@ header, footer{
   width: 40px;
   height: 40px;
   margin: 10px;
-  border: 2px solid rgba(241, 217, 237, 0.952); 
+  /* border: 2px solid rgba(241, 217, 237, 0.952);  */
+  border: 3px solid rgba(83, 57, 68, 0.952); 
   border-radius: 50px;
 }
 
@@ -111,7 +114,7 @@ background-color: #000066;
 
 .board button.hole{
   background-color:black;
-  border: 2px solid black; 
+  border: 3px solid rgba(63, 53, 53, 0.952); 
 }
 
 .board button.selected{
