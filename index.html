@@ -12,25 +12,26 @@
       <h1>Final Work: Peg-Solitaire</h1>        
     </header> 
     <main>
-      <div id="left">
+        <form id="left">
+            <div>
+                <input type="text" id="name" placeholder="Name"/>
+                <input type="email" id="mail" placeholder="Email"/>
+            </div>
+           
+        </form>
+      <div id="middle">
           <div id="board" class="board"></div>
       </div>
       <div id="right">
-          <form id="form">
-              <div id="score">
-                  <div id="scoreleft">SCORE</div>
-                  <div id="scoreright">0</div>
-              </div>
-              <div>
-                  <input type="text" id="name" placeholder="Name"/>
-              </div>
-              <div>
-                  <input type="email" id="mail" placeholder="Email"/>
-              </div>                           
-              <div class="button">
-                  <button type="submit" id="button">Send your message</button>
-              </div>
-          </form>
+            <div id="score">
+                <div id="scoreleft">SCORE</div>
+                <div id="scoreright">0</div>
+            </div>
+            <div class="buttons">
+                <button type="submit" id="buttonsave">Save</button>
+                <button type="submit" id="buttonreset">Reset</button>
+                <button type="submit" id="buttonload">Load</button>
+            </div>
       </div>  
     </main>  
     <footer>

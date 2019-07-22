@@ -1,5 +1,4 @@
-var board = [ //array de objetos
-
+var board = [ 
   [, , { value: 1 }, { value: 1 }, { value: 1 }, , ,],
   [, , { value: 1 }, { value: 1 }, { value: 1 }, , ,],
   [{ value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }],
@@ -7,14 +6,13 @@ var board = [ //array de objetos
   [{ value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }],
   [, , { value: 1 }, { value: 1 }, { value: 1 }, , ,],
   [, , { value: 1 }, { value: 1 }, { value: 1 }, , ,],
-
 ]
 
 var selectedPeg = { x: undefined, y: undefined }
 
 var suggestions = []
 
-var score = 0
+var score = -1
 
 var condScore = false
 
@@ -48,7 +46,7 @@ var generateCell = function (cell, rowN, colN) {
   return html
 }
 
-var generateRow = function (row, rowN) {  //2
+var generateRow = function (row, rowN) {  
   var html = '<div class"row">'
   for (var j = 0; j < row.length; j++) {
       html += generateCell(row[j], rowN, j);
@@ -141,7 +139,6 @@ var addPegsEventHandlers = function (pegs) {
 
 var movePeg = function (evt) {
   var id = evt.target.id
-  condScore = true
   var pos = getPositionFromId(id)
   if (pos.x !== undefined && pos.y !== undefined) {
       if (suggestions.includes(id)) {
@@ -159,25 +156,72 @@ var movePeg = function (evt) {
           init()
       }
   }
-  showsCore(condScore)
 }
 
 var addHolesEventHandlers = function (holes) {
-
   for (var i = 0; i < holes.length; i++) {
       holes[i].onclick = movePeg
   }
 }
 
-var showsCore = function(condScore){
-    var html = ""
-    if(condScore == true){
-        score++
-        condScore = false
-        html = score.toString()
-    }
-    document.getElementById('scoreright').innerHTML = html
+var resetBoard=function(evt){
+    var option = confirm("¿Esta seguro que desea reiniciar el juego?")
+    board = [ 
+        [, , { value: 1 }, { value: 1 }, { value: 1 }, , ,],
+        [, , { value: 1 }, { value: 1 }, { value: 1 }, , ,],
+        [{ value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }],
+        [{ value: 1 }, { value: 1 }, { value: 1 }, { value: 0 }, { value: 1 }, { value: 1 }, { value: 1 }],
+        [{ value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }, { value: 1 }],
+        [, , { value: 1 }, { value: 1 }, { value: 1 }, , ,],
+        [, , { value: 1 }, { value: 1 }, { value: 1 }, , ,],
+    ]
+    score = -1
+    init()
 }
+  
+var saveGame=function(evt){
+    var localBoard=JSON.stringify(board)
+    var name = document.getElementById('name').value
+    localStorage.name = name
+    localStorage.setItem(name, localBoard)
+  }
+  
+ 
+var loadGame=function(evt){
+    var name = prompt("Cual es su nombre? ")
+    var load = localStorage.getItem(name)
+    board= JSON.parse(load)
+    init() 
+}
+
+var showScore = function(){
+    var html = ""
+    score = -1;
+    for (var i=0;i < board.length; i++){
+      for (var j=0;j < board[i].length; j++){
+        if (board[i][j]&&board[i][j].value===0) {
+          // console.log(board[i][j])
+          score++ 
+        }
+      }
+    }
+    return html = score.toString()
+}
+
+ var addResetEventHandlers=function(reset){
+      reset.onclick=resetBoard
+     }
+  
+  var addSaveEventHandlers=function(save){
+    save.onclick=saveGame
+    
+  }
+  
+  var addLoadGameEventHandlers=function(savedGame){
+    savedGame.onclick=loadGame
+  }
+  
+
 var init = function () {
   var boardElement = document.getElementById('board')
   boardElement.innerHTML = generateBoard()
@@ -185,6 +229,14 @@ var init = function () {
   addPegsEventHandlers(pegs)
   var holes = boardElement.getElementsByClassName('hole')
   addHolesEventHandlers(holes)
+  var score = document.getElementById('scoreright')
+  score.innerHTML = showScore()
+  var reset = document.getElementById('buttonreset')
+  addResetEventHandlers(reset)
+  var save=document.getElementById('buttonsave')
+  addSaveEventHandlers(save)
+  var loadGame = document.getElementById('buttonload')
+  addLoadGameEventHandlers(loadGame)
 }
 
 window.onload = init
