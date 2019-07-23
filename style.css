@@ -215,51 +215,25 @@ h1:hover{
     width: 480px;
   }
 }
-@media screen and (device-width: 360px) {
-  header, footer, .board button.peg:hover{
-    text-shadow: none;
-    box-shadow: none;
-  }
-  #left, #right, #middle{
-    width: 100vw;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    height: 50vw;
-  }
+@media screen and (max-device-width: 500px) {
 
-  #left{
-    margin-bottom: -15vh;
-    margin-top: -15vh;
+  #left,#right{
+   visibility: hidden;
+   height: 10%;
   }
-  input{
-    height: 3vh;;
-    width: 50vw;
-  }
-
-  #left{
-    height: 80vh;
-  }
-
-  .board button {
-    width: 80px;
-    height: 80px;
-    margin: 20px;
-  }
-
-  input, #button , #score{
-    text-shadow: none;
-    width: 90vw;
-    height: 4vh;
-    font-size: 3vh; 
-    box-sizing: border-box;
-    margin-bottom: 5px;
-    padding: 5px;
-  }
-
-  header, footer{
+  #middle{
+    height: 80%;
     width: 100vw;
   }
+  .board button{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid black;  
+    border-radius: 50px;
+  }
+  
+
 }
 
 

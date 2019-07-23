@@ -194,7 +194,7 @@ var loadGame=function(evt){
     init() 
 }
 
-var showScore = function(){
+var showScore = function(){ 
     var html = ""
     score = -1;
     for (var i=0;i < board.length; i++){
