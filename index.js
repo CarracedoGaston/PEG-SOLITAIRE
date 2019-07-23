@@ -182,25 +182,70 @@ var resetBoard=function(evt){
 var saveGame=function(evt){
     var localBoard=JSON.stringify(board)
     var name = document.getElementById('name').value
-    localStorage.name = name
     localStorage.setItem(name, localBoard)
+
   }
-  
- 
+
 var loadGame=function(evt){
-    var name = prompt("Cual es su nombre? ")
-    var load = localStorage.getItem(name)
-    board= JSON.parse(load)
-    init() 
+
+    var keys = Object.keys(localStorage)
+    var scores = []
+    var player = ""
+    for(var i=0;i<keys.length;i++){
+      // alert(boardLocalstorage(keys[i]))
+      player = keys[i] + "   " + scoresLocalstorage(boardLocalstorage(keys[i])).toString()
+      scores.push(player)
+      
+    }
+    alert(scores.join("\n"));
+    // var name = prompt("Cual es su nombre? ")
+    // var load = localStorage.getItem(name)  
+
+    // var num = localStorage.length
+    // for(var i=0; i<num;i++){
+    //   var load = localStorage.getItem(i)
+    //   var boarda = JSON.parse(load)
+    //   score = -1;
+    //   for (var i=0;i < boarda.length; i++){
+    //     for (var j=0;j < boarda[i].length; j++){
+    //       if (boarda[i][j]&&boarda[i][j].value==0) {
+    //         score++ 
+    //       }
+    //     }
+    //   scores.push(score)
+    //   }
+    //   alert(keys)
+    // }
+    // var load = localStorage.getItem(keys[0])
+    // board= JSON.parse(load)
+    // init() 
+    
 }
 
+var boardLocalstorage = function(item){
+  var boardpro
+  var load = localStorage.getItem(item)
+  boardpro = JSON.parse(load)
+  return boardpro
+}
+var scoresLocalstorage = function(item){
+  var score = -1
+  var html = ""
+  for (var i=0;i < item.length; i++){
+    for (var j=0;j < item[i].length; j++){
+      if (item[i][j]&&item[i][j].value==0) {
+        score++ 
+      }
+    }
+  }
+  return html = score.toString()
+}
 var showScore = function(){ 
     var html = ""
     score = -1;
     for (var i=0;i < board.length; i++){
       for (var j=0;j < board[i].length; j++){
-        if (board[i][j]&&board[i][j].value===0) {
-          // console.log(board[i][j])
+        if (board[i][j]&&board[i][j].value==0) {
           score++ 
         }
       }
