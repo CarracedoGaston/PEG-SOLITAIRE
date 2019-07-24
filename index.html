@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="index.js"></script>
+    <script src="js/Initialize.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/generateHtml.js"></script>
+    <script src="js/handlers.js"></script>
+    <script src="js/players.js"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -13,36 +17,32 @@
     </header> 
     <main>
       <div id="left">
-          <table id="table">
-              <tr class="titles">Player</tr>
-              <tr class="titles">Score</tr>
-            </table>
-            <form id="left">
-                <div>
-                    <input type="text" id="name" placeholder="Name"/>
-                    <input type="email" id="mail" placeholder="Email"/>
-                </div>  
-            </form>
+        <table id="table">
+        </table>
+        <form id="form">
+          <div>
+            <input type="text" id="name" placeholder="Name"/>
+            <input type="email" id="mail" placeholder="Email"/>
+          </div>  
+        </form>
       </div>
-      
-        
       <div id="middle">
-          <div id="board" class="board"></div>
+        <div id="board" class="board"></div>
       </div>
       <div id="right">
-            <div id="score">
-                <div id="scoreleft">SCORE</div>
-                <div id="scoreright">0</div>
+        <div id="score">
+          <div id="scoreleft">SCORE</div>
+            <div id="scoreright">0</div>
             </div>
-            <div class="buttons">
-                <button type="submit" id="buttonsave">Save</button>
-                <button type="submit" id="buttonreset">Reset</button>
-                <button type="submit" id="buttonload">Load</button>
-            </div>
+          <div class="buttons">
+            <button type="submit" id="buttonsave">Save</button>
+            <button type="submit" id="buttonreset">Reset</button>
+            <button type="submit" id="buttonload">Load</button>
+          </div>
       </div>  
     </main>  
     <footer>
-        <h1>Carracedo Gaston</h1>
+      <h1>Carracedo Gaston</h1>
     </footer>
   </body>
 </html>

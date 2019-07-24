@@ -12,7 +12,33 @@ main{
   height: 80vh;
   width: 100vw;
 }
-
+#title{
+  color: white;
+  font-size: 200%;
+  text-shadow:
+    0 0 5px rgba(162, 0, 255),
+    0 0 5px rgba(162, 0, 255),
+		0 0 10px rgba(162, 0, 255),
+		0 0 20px rgba(162, 0, 255),
+		0 0 40px rgba(101, 46, 133),
+		0 0 80px rgba(101, 46, 133),
+		0 0 90px rgba(101, 46, 133),
+		0 0 100px rgba(101, 46, 133),
+		0 0 140px rgba(101, 46, 133),
+    0 0 180px rgba(101, 46, 133);
+    
+}
+.position{
+  color: white;
+  font-size: 100%;
+  text-align: center;
+}
+#ladder0{
+  color: orange;
+}
+#ladder1, #ladder2{
+  color: green;
+}
 #middle{
   width: 60vw;
   display: flex;
