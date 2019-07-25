@@ -124,5 +124,3 @@ var resetBoard = function(evt){
 
 
 
-
-

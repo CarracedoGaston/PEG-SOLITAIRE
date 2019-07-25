@@ -30,26 +30,24 @@ var generateBoard = function () {
     html += '</div>'
     return html
 }
- //Create a ladderboard
+//Create a ladderboard
 var generateLaderboard = function(){
     var keys = Object.keys(localStorage)
-    var score = 0
-    var player = ""
+    var score = []
+    var number = []
     var html = "<tr id='title'><th>Player</th><th>Score</th></tr>"
-    for(var i = 0; i < keys.length; i++){
-      html += "<tr id= ladder" + i + " class = 'position'><td>" +  keys[i] +  "</td><td>" +  playerScore(playerBoard(keys[i])).toString() + "</td></tr>"
+    for(var j = 0; j < keys.length; j++){
+        score.push(playerScore(playerBoard(keys[j])).toString())
+    }
+    score.sort(mayorAmenor)
+    score.splice(5)
+    for(var z = 0; z < keys.length; z++){
+        number.push(playerScore(playerBoard(keys[z])).toString())  
+    }
+    for(var i = 0; i < score.length; i++){
+        var player = number.indexOf(score[i].toString()) 
+        html += "<tr id= ladder" + i + " class = 'position'><td>" +  keys[player] +  "</td><td>" +  score[i] + "</td></tr>"
     }
     return html.toString()
 }
-//Create a score about the board on game
-var generateScore = function(){ 
-    score = -1;  
-    for (var i=0;i < board.length; i++){
-      for (var j=0;j < board[i].length; j++){
-        if (board[i][j]&&board[i][j].value==0) {
-          score++ 
-        }
-      }
-    }
-    return score
-}
+

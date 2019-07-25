@@ -5,6 +5,19 @@ var playerBoard = function(player){
   boardsaved = JSON.parse(load)
   return boardsaved
 }
+
+//Calculate the score of a player saved, using a board
+var playerScore = function(boardSaved){
+  var score = -1
+  for (var i = 0; i < boardSaved.length; i++){
+    for (var j = 0; j < boardSaved[i].length; j++){
+      if (boardSaved[i][j] && boardSaved[i][j].value == 0) {
+        score++ 
+      }
+    }
+  }
+  return score
+}
 //An alert that show the ladderboard
 var ladderboardAlert = function(){
   var keys = Object.keys(localStorage)
@@ -17,18 +30,6 @@ var ladderboardAlert = function(){
     scores.sort()
   }
   alert(scores.join("\n"));
-}
-//Calculate the score of a player saved, using a board
-var playerScore = function(boardSaved){
-  var score = -1
-  for (var i = 0; i < boardSaved.length; i++){
-    for (var j = 0; j < boardSaved[i].length; j++){
-      if (boardSaved[i][j] && boardSaved[i][j].value == 0) {
-        score++ 
-      }
-    }
-  }
-  return score
 }
 //Save the game, and show the laderboard on an alert
 var saveGame = function(evt){
