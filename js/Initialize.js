@@ -12,9 +12,6 @@ var selectedPeg = { x: undefined, y: undefined }
 
 var suggestions = []
 
-var mayorAmenor = function(elemt1, elemt2){
-  return elemt2-elemt1
-}
 //Create a score about the board on game
 var generateScore = function(){ 
   score = -1;  

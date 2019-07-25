@@ -25,19 +25,29 @@ main{
 		0 0 90px rgba(101, 46, 133),
 		0 0 100px rgba(101, 46, 133),
 		0 0 140px rgba(101, 46, 133),
-    0 0 180px rgba(101, 46, 133);
-    
+    0 0 180px rgba(101, 46, 133); 
 }
+
 .position{
-  color: white;
-  font-size: 100%;
+  border: 1px solid white;
+  height: 40px;
   text-align: center;
+  background: rgb(17, 17, 17);
+
 }
-#ladder0{
+.name, .score{
+  font-size: 150%;
+  border: 1px solid white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#leader0{
   color: orange;
 }
-#ladder1, #ladder2{
+#leader1, #leader2{
   color: green;
+}
+#leader3, #leader4{
+  color: blue;
 }
 #middle{
   width: 60vw;

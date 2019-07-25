@@ -30,24 +30,22 @@ var generateBoard = function () {
     html += '</div>'
     return html
 }
-//Create a ladderboard
+
+//create a leaderboard of the top 5 players
 var generateLeaderboard = function(){
     var keys = Object.keys(localStorage)
-    var score = []
-    var number = []
+    var list = []
     var html = "<tr id='title'><th>Player</th><th>Score</th></tr>"
-    for(var j = 0; j < keys.length; j++){
-        score.push(playerScore(playerBoard(keys[j])).toString())
+    for (var i = 0; i < keys.length; i++){
+        list.push({name: keys[i], score: playerScore(playerBoard(keys[i]))})
     }
-    score.sort(mayorAmenor)
-    score.splice(5)
-    for(var z = 0; z < keys.length; z++){
-        number.push(playerScore(playerBoard(keys[z])).toString())  
+    list.sort(majortoMinor)
+    list.splice(5)
+    for(var i = 0; i < list.length; i++){
+        html += "<tr id= leader" + i + " class = 'position'><td class = 'name'>" +  list[i].name +  "</td><td class = 'score'>" + list[i].score+ "</td></tr>"
     }
-    for(var i = 0; i < score.length; i++){
-        var player = number.indexOf(score[i].toString()) 
-        html += "<tr id= ladder" + i + " class = 'position'><td>" +  keys[player] +  "</td><td>" +  score[i] + "</td></tr>"
-    }
-    return html.toString()
+    return html.toString() 
 }
-
+var majortoMinor = function(a, b){
+    return b.score - a.score
+}
