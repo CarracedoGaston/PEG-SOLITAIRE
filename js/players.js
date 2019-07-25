@@ -33,11 +33,27 @@ var leaderboardAlert = function(){
 }
 //Save the game, and show the laderboard on an alert
 var saveGame = function(evt){
+  var keys = Object.keys(localStorage)
   var localBoard = JSON.stringify(board)
   var name = document.getElementById('name').value
-  localStorage.setItem(name, localBoard)
-  leaderboardAlert()
-  init()
+  if(!keys.includes(name)){
+    localStorage.setItem(name, localBoard)
+    leaderboardAlert()
+    init()
+  }
+  if(keys.includes(name)){
+    var load = localStorage.getItem(name)  
+    boardSaved = JSON.parse(load)
+    if(playerScore(boardSaved) < generateScore()){
+      localStorage.setItem(name, localBoard)
+      leaderboardAlert()
+      console.log('esaaaa')
+      init()
+    }
+    else{
+      alert('Ya existe un player con dicho nombre con un puntaje mayor: ' + playerScore(boardSaved).toString() )   
+    }
+  }
 }
 //Load a saved game
 var loadGame = function(evt){
