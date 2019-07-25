@@ -31,7 +31,7 @@ var generateBoard = function () {
     return html
 }
 //Create a ladderboard
-var generateLaderboard = function(){
+var generateLeaderboard = function(){
     var keys = Object.keys(localStorage)
     var score = []
     var number = []

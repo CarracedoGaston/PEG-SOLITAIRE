@@ -19,7 +19,7 @@ var playerScore = function(boardSaved){
   return score
 }
 //An alert that show the ladderboard
-var ladderboardAlert = function(){
+var leaderboardAlert = function(){
   var keys = Object.keys(localStorage)
   var scores = []
   var gameSaved = "Player" + "   " + "Score"
@@ -36,7 +36,7 @@ var saveGame = function(evt){
   var localBoard = JSON.stringify(board)
   var name = document.getElementById('name').value
   localStorage.setItem(name, localBoard)
-  ladderboardAlert()
+  leaderboardAlert()
   init()
 }
 //Load a saved game
