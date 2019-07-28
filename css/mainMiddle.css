@@ -49,17 +49,21 @@
 }
 
 .board button.selected{
-  background-color: #dbf7e9;
+  background-color: #46135b;
   border: 3px solid #dbf7e9;
 }
+
 .board button.hole{
   background-color: black;
-  /* border: 3px solid #bd24fd; */
 }
 
+.board button.peg:hover{
+  background-color: #5d2176;
+  border: 3px solid #dbf7e9;
+}
 .board button.suggestion {
-  background-color: rgba(103, 241, 126, 0.822);
-  border: 3px double white;
+  background-color: #1c68fa;
+  border: 3px solid #dbf7e9;
 }
 
 
