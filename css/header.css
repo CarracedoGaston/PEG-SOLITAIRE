@@ -32,3 +32,17 @@ header{
     margin-top: -4px; 
   }
 
+  @media (max-width: 1000px) { 
+    #leftTitle{
+      width: 75vw;
+      font-size: 600%;
+      text-align: left;
+    }
+    #rightContacts{
+      display: flex;
+      flex-direction: column;
+      font-size: 200%;
+      text-align: left;
+      width: 25vw;
+    }
+  }
