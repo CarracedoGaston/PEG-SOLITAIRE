@@ -35,10 +35,11 @@ var leaderboardAlert = function(){
 var saveGame = function(evt){
   var keys = Object.keys(localStorage)
   var localBoard = JSON.stringify(board)
-  var name = document.getElementById('name').value
+  var name = prompt("Ingrese su nombre:")
+  // var name = document.getElementById('name').value
   if(!keys.includes(name)){
     localStorage.setItem(name, localBoard)
-    leaderboardAlert()
+    // leaderboardAlert()
     init()
   }
   if(keys.includes(name)){
@@ -47,15 +48,14 @@ var saveGame = function(evt){
     if(playerScore(boardSaved) < generateScore()){
       localStorage.setItem(name, localBoard)
       leaderboardAlert()
-      console.log('esaaaa')
       init()
     }
     else{
-      alert('Ya existe un player con dicho nombre con un puntaje mayor: ' + playerScore(boardSaved).toString() )   
+      alert('Este jugador ya tiene un record de: ' + playerScore(boardSaved).toString() )   
     }
   }
 }
-//Load a saved game
+
 var loadGame = function(evt){
   var name = prompt("Cual es su nombre? ")
   var load = localStorage.getItem(name)  
