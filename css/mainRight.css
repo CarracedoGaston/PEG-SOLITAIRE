@@ -61,16 +61,18 @@
     #rightLeaders{
       order: 2;
       margin-left: 50%;
-      width: 60%;
+      width: 50%;
     }
 
     #table{
       width: 70%;
       height: 24vh;
       margin-bottom: 0; 
+      margin-left: 8%;
     }
     #tableTitle{
       font-size: 400%;
+      margin-left: 8%;
     }
     #tableImg, #allScore{
       display: none;

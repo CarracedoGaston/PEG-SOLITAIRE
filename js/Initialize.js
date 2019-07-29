@@ -25,8 +25,6 @@ var generateScore = function(){
   return score
 }
 
-setTimeout(function() { window.scrollTo(0, 1) }, 100);
-
 var init = function () {
   var boardElement = document.getElementById('board')
   boardElement.innerHTML = generateBoard()
