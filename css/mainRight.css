@@ -59,15 +59,15 @@
 
    @media (max-width: 1000px) { 
     #rightLeaders{
-      position: fixed;
-      right: 0;
-      height: 24.5%;
+      order: 2;
+      margin-left: 50%;
       width: 60%;
     }
+
     #table{
-      width: 80%;
-      height: 385px;
-      margin-bottom: 0;
+      width: 70%;
+      height: 24vh;
+      margin-bottom: 0; 
     }
     #tableTitle{
       font-size: 400%;
@@ -77,5 +77,6 @@
     }
     .name, .score{
       font-size: 350%;
+      margin-top: -10px;
     }
   }

@@ -32,6 +32,7 @@
  
   @media (max-width: 1000px) { 
     #leftButtons{
+      order: 1;
       width: 40%;
       height: 28%;
     }

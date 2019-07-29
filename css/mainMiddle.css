@@ -69,6 +69,7 @@
 
 @media (max-width: 1000px) { 
   #middleBoard{
+    order: 3;
     width: 100%;
     height: 72%;
     padding-left: 0;
