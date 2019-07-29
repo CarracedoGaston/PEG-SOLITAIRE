@@ -31,11 +31,17 @@ var leaderboardAlert = function(){
   }
   alert(scores.join("\n"));
 }
+var modalSave = function(){
+  document.getElementById('modal').style.display = "flex"
+}
+var modalHide = function(){
+  document.getElementById('modal').style.display = "none"
+}
 //Save the game, and show the laderboard on an alert
 var saveGame = function(evt){
   var keys = Object.keys(localStorage)
   var localBoard = JSON.stringify(board)
-  var name = prompt("Ingrese su nombre:")
+  var name = document.getElementById('modalInput').value;
   // var name = document.getElementById('name').value
   if(!keys.includes(name)){
     localStorage.setItem(name, localBoard)
@@ -47,13 +53,16 @@ var saveGame = function(evt){
     boardSaved = JSON.parse(load)
     if(playerScore(boardSaved) < generateScore()){
       localStorage.setItem(name, localBoard)
-      leaderboardAlert()
+      // leaderboardAlert()
       init()
+      
     }
     else{
-      alert('Este jugador ya tiene un record de: ' + playerScore(boardSaved).toString() )   
+      alert('Este jugador ya tiene un record de ' + playerScore(boardSaved).toString() ) 
     }
+    
   }
+  modalHide()
 }
 
 var loadGame = function(evt){

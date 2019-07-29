@@ -35,7 +35,6 @@ var generateBoard = function () {
 var generateLeaderboard = function(){
     var keys = Object.keys(localStorage)
     var list = []
-    // var html = "<tr id='title'><th>Player</th><th>Score</th></tr>"
     var html = ""
     for (var i = 0; i < keys.length; i++){
         list.push({name: keys[i], score: playerScore(playerBoard(keys[i]))})

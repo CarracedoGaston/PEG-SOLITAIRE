@@ -18,7 +18,14 @@ var addSaveEventHandlers=function(save){
     save.onclick = saveGame 
 }
     
-var addLoadGameEventHandlers=function(savedGame){
-    savedGame.onclick = loadGame
+var addLoadGameEventHandlers=function(load){
+    load.onclick = loadGame
+}
+
+var showModalSaveEventHandlers = function(modal){
+    modal.onclick = modalSave
+}
+var HideModalSaveEventHandlers = function(modal){
+    modal.onclick = modalHide
 }
   

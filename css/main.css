@@ -1,5 +1,6 @@
 main{
     display: flex;
+    z-index: 0;
     flex-direction: row;
     height: 85vh;
     padding-top: 5vh;
