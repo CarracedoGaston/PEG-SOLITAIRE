@@ -65,7 +65,7 @@
     }
 
     #table{
-      width: 70%;
+      width: 75%;
       height: 24vh;
       margin-bottom: 0; 
       margin-left: 8%;
@@ -73,6 +73,7 @@
     #tableTitle{
       font-size: 400%;
       margin-left: 8%;
+      margin-bottom: 1vh;
     }
     #tableImg, #allScore{
       display: none;
