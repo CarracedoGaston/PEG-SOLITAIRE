@@ -15,17 +15,20 @@ var addResetEventHandlers=function(reset){
 }
     
 var addSaveEventHandlers=function(save){
-    save.onclick = saveGame 
+    save.onclick = saveGame    
 }
     
 var addLoadGameEventHandlers=function(load){
     load.onclick = loadGame
 }
 
-var showModalSaveEventHandlers = function(modal){
-    modal.onclick = modalSave
+var showModalSaveEventHandlers = function(modalSave){
+    modalSave.onclick = modalShowSave
 }
-var HideModalSaveEventHandlers = function(modal){
+var showModalLoadEventHandlers = function(modalLoad){
+    modalLoad.onclick = modalShowLoad
+}
+var HideModalEventHandlers = function(modal){
     modal.onclick = modalHide
 }
   

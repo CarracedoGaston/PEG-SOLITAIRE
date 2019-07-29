@@ -31,18 +31,25 @@ var leaderboardAlert = function(){
   }
   alert(scores.join("\n"));
 }
-var modalSave = function(){
+
+var modalShowSave = function(){
   document.getElementById('modal').style.display = "flex"
+  document.getElementById('acceptSave').style.display = "flex"
+}
+var modalShowLoad = function(){
+  document.getElementById('modal').style.display = "flex"
+  document.getElementById('acceptLoad').style.display = "flex"
 }
 var modalHide = function(){
   document.getElementById('modal').style.display = "none"
+  document.getElementById('acceptLoad').style.display = "none"
+  document.getElementById('acceptSave').style.display = "none"
 }
 //Save the game, and show the laderboard on an alert
 var saveGame = function(evt){
   var keys = Object.keys(localStorage)
   var localBoard = JSON.stringify(board)
-  var name = document.getElementById('modalInput').value;
-  // var name = document.getElementById('name').value
+  var name = document.getElementById('modalInput').value
   if(!keys.includes(name)){
     localStorage.setItem(name, localBoard)
     // leaderboardAlert()
@@ -66,8 +73,9 @@ var saveGame = function(evt){
 }
 
 var loadGame = function(evt){
-  var name = prompt("Cual es su nombre? ")
+  var name = document.getElementById('modalInput').value
   var load = localStorage.getItem(name)  
   board = JSON.parse(load)
+  modalHide()
   init()  
 }

@@ -22,7 +22,7 @@ header{
     width: 10vw;
   }
   a{
-    margin-top: 3px; 
+    margin-top: 3px;
     color: #dbf7e9;
     text-decoration: none;
     padding: 2px;
@@ -30,11 +30,11 @@ header{
   .contactImg{
     height: 20px;
     padding: 2px;
-    margin-top: -4px; 
+    margin-top: -4px;
   }
 
 
-  @media (max-width: 1000px) { 
+  @media (max-width: 1000px) {
     #leftTitle{
       width: 75vw;
       font-size: 600%;
@@ -52,8 +52,8 @@ header{
 
 
   #modal{
-    display: none; 
-    /* display: flex;  */
+    display: none;
+    /* display: flex;   */
     position: fixed;
     flex-direction: column;
     bottom: 58.5%;
@@ -63,9 +63,12 @@ header{
     width: 90vw;
     background-color: black;
     border-radius: 15px 70px 15px 70px;
-    border: 4px solid #dbf7e9; 
+    border: 4px solid #dbf7e9;
     background-color: #aea0f5;
-
+  }
+  #acceptSave, #acceptLoad{
+   
+    display: none;
   }
   .modalInput{
     width: 100%;
@@ -81,10 +84,10 @@ header{
     height: 40%;
     justify-content: space-around;
   }
-  #accept, #cancel{
+  .modalButtons{
     border-radius: 30px 30px 30px 30px;
     width: 40%;
     height: 70%;
     font-size: 300%;
-   
+    
   }

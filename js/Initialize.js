@@ -38,14 +38,17 @@ var init = function () {
   leader.innerHTML = generateLeaderboard()
   var reset = document.getElementById('resetGame')
   addResetEventHandlers(reset)
-  var modalSave = document.getElementById('saveGame')
-  showModalSaveEventHandlers(modalSave)
+  var modalShowSave = document.getElementById('saveGame')
+  showModalSaveEventHandlers(modalShowSave)
+  var modalShowLoad = document.getElementById('loadGame')
+  showModalLoadEventHandlers(modalShowLoad)
   var modalHide = document.getElementById('cancel')
-  HideModalSaveEventHandlers(modalHide)
-  var save = document.getElementById('accept')
-  addSaveEventHandlers(save)
-  var loadGame = document.getElementById('loadGame')
-  addLoadGameEventHandlers(loadGame)
+  HideModalEventHandlers(modalHide)
+  var modalAcceptSave = document.getElementById('acceptSave')
+  addSaveEventHandlers(modalAcceptSave)
+  var modalAcceptLoad = document.getElementById('acceptLoad')
+  addLoadGameEventHandlers(modalAcceptLoad)
+ 
 }
 
 window.onload = init
