@@ -34,11 +34,11 @@ var leaderboardAlert = function(){
 
 var modalShowSave = function(){
   document.getElementById('modal').style.display = "flex"
-  document.getElementById('acceptSave').style.display = "flex"
+  document.getElementById('acceptSave').style.display = "block"
 }
 var modalShowLoad = function(){
   document.getElementById('modal').style.display = "flex"
-  document.getElementById('acceptLoad').style.display = "flex"
+  document.getElementById('acceptLoad').style.display = "block"
 }
 var modalHide = function(){
   document.getElementById('modal').style.display = "none"

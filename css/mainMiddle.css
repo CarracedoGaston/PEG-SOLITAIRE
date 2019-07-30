@@ -1,13 +1,12 @@
-#middleBoard{
+#middleBoard {
   width: 50vw;
   padding-left: 3vw;
   padding-right: 3vw; 
   display: flex;
   justify-content: center;
-  
 }
 
-#gameScore{
+#gameScore {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -15,16 +14,17 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #dbf7e9;
 }
-#scoreLeft{
+
+#scoreLeft {
   width: 90%;
-  text-align: right;
-  
+  text-align: right;  
 }
-#scoreRight{
+
+#scoreRight {
   width: 10%;
-  text-align: right;
-  
+  text-align: right;  
 }
+
 .board button {
   width: 6vh;
   height: 6vh;
@@ -33,48 +33,50 @@
   border-radius: 50px;
 }
 
-.board{
+.board {
   border-radius: 15px 70px 15px 70px;
   margin-top: 45px;
   border: 10px solid #dbf7e9;
-  background-color: #49436b;
-  
+  background-color: #49436b;  
 }
-.board button.hidden{
+
+.board button.hidden {
   visibility: hidden;
 }
 
-.board button.peg{
+.board button.peg {
   background-color: #bd24fd; 
   border: 3px solid #dbf7e9;
 }
 
-.board button.selected{
+.board button.selected {
   background-color: #46135b;
   border: 3px solid #dbf7e9;
 }
 
-.board button.hole{
+.board button.hole {
   background-color: black;
 }
 
-.board button.peg:hover{
+.board button.peg:hover {
   background-color: #5d2176;
   border: 3px solid #dbf7e9;
 }
+
 .board button.suggestion {
   background-color: #1c68fa;
   border: 3px solid #dbf7e9;
 }
 
 @media (max-width: 1000px) { 
-  #middleBoard{
+  #middleBoard {
     order: 3;
     width: 100%;
     height: 72%;
     padding-left: 0;
     padding-right: 0;  
   }
+
   .board button {
     width: 10vw;
     height: 10vw;
@@ -82,280 +84,8 @@
     border: 3px solid;   
     border-radius: 50px;
   }
-  #gameScore{
+
+  #gameScore {
     font-size: 400%;
   }
-  
 }
-/* body{
-  display:flex;
-  flex-direction:column;   
-  justify-content: space-around;
-  align-items: center;
-  background-color: black;
-}
-
-main{
-  display:  flex;
-  flex-direction: row;
-  height: 80vh;
-  width: 100vw;
-}
-#title{
-  color: white;
-  font-size: 200%;
-  text-shadow:
-    0 0 5px rgba(162, 0, 255),
-    0 0 5px rgba(162, 0, 255),
-		0 0 10px rgba(162, 0, 255),
-		0 0 20px rgba(162, 0, 255),
-		0 0 40px rgba(101, 46, 133),
-		0 0 80px rgba(101, 46, 133),
-		0 0 90px rgba(101, 46, 133),
-		0 0 100px rgba(101, 46, 133),
-		0 0 140px rgba(101, 46, 133),
-    0 0 180px rgba(101, 46, 133); 
-}
-
-.position{
-  border: 1px solid white;
-  height: 40px;
-  text-align: center;
-  background: rgb(17, 17, 17);
-
-}
-
-.name, .score{
-  font-size: 150%;
-  border: 1px solid white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-#leader0{
-  color: orange;
-}
-#leader1, #leader2{
-  color: green;
-}
-#leader3, #leader4{
-  color: blue;
-}
-#middle{
-  width: 50vw;
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-}
-#left,  #right{
-  width: 25%;
-  padding: 2vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- 
-}
-
-#score{
-display: flex; 
-align-items: center;
-flex-direction: row;
-color: white;
-box-sizing: border-box;
-text-shadow:
-    0 0 5px rgba(162, 0, 255),
-    0 0 5px rgba(162, 0, 255),
-		0 0 10px rgba(162, 0, 255),
-		0 0 20px rgba(162, 0, 255),
-		0 0 40px rgba(101, 46, 133),
-		0 0 80px rgba(101, 46, 133),
-		0 0 90px rgba(101, 46, 133),
-		0 0 100px rgba(101, 46, 133),
-		0 0 140px rgba(101, 46, 133),
-		0 0 180px rgba(101, 46, 133);
-font-size: 170%;
-width: 100%;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#scoreleft{
-  width: 60%;
-  text-align: center;
-}
-#scoreright{
-  width: 40%;
-  text-align: center;
-}
-
-.buttons{
-  height: 80%;
-  width: 100%;
-  display: flex; 
-  flex-direction: column;
-  padding-top: 30px;
-  margin-top: 30px;
-}
-input {
-width: 100%;
-box-sizing: border-box;
-margin-bottom: 5px;
-padding: 5px;
-}
-
-#buttonsave, #buttonreset, #buttonload {
-  margin-top: 10px;
-  border: double;
-}
-
-#board{ 
-  border: solid 10px rgba(179, 138, 196, 0.582); 
-  box-shadow: 0 0 80px rgba(157, 0, 255, 0.582); 
-  border-radius: 5px; 
-  margin-top: -10px;
-} 
-
-#table{
-  width: 100%;
-}
-footer{
-  position: fixed; 
-  bottom: 0px;
-  left: 0px;   
-  height: 8vh;
-}
-header{
-  height: 12vh;
-}
-
-header, footer{
-  display: flex;
-  background-color: black;
-  justify-content: center;
-  font-size: 50px;
-  font-style: italic;
-  align-items: center;
-  
-  width: 100vw;
-  color: #fff;
-}
-
-h1:hover{
-  transition-duration: 1.5s;
-   text-shadow:
-    0 0 5px rgba(162, 0, 255),
-    0 0 5px rgba(162, 0, 255),
-		0 0 10px rgba(162, 0, 255),
-		0 0 20px rgba(162, 0, 255),
-		0 0 40px rgba(101, 46, 133),
-		0 0 80px rgba(101, 46, 133),
-		0 0 90px rgba(101, 46, 133),
-		0 0 100px rgba(101, 46, 133),
-		0 0 140px rgba(101, 46, 133),
-		0 0 180px rgba(101, 46, 133);
-}
-
-.board button {
-  width: 40px;
-  height: 40px;
-  margin: 10px;
-  border: 3px solid black;  
-  border-radius: 50px;
-}
-
-.board button.hidden{
-  visibility: hidden;
-}
-
-.board button.peg{
-  background-color: white;   
-}
-
-.board button.peg:hover, .board button.selected {
-  box-shadow:
-    0 0 5px rgba(162, 0, 255),
-    0 0 5px rgba(162, 0, 255),
-		0 0 10px rgba(162, 0, 255),
-		0 0 20px rgba(162, 0, 255),
-		0 0 40px rgba(101, 46, 133),
-		0 0 80px rgba(101, 46, 133),
-		0 0 90px rgba(101, 46, 133),
-		0 0 100px rgba(101, 46, 133),
-		0 0 140px rgba(101, 46, 133),
-		0 0 180px rgba(101, 46, 133);
-}
-
-.board button.hole{
-  background-color:black;
-  border: 3px double white;
-}
-
-.board button.suggestion {
-  background-color: rgba(103, 241, 126, 0.822);
-  border: 3px double white;
-}
-
-
-@media only screen and (max-width: 987px) {
-  main {
-    flex-direction: column;
-  }
-  #left, #sco{
-    width: 100vw;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-  }
-  #left{
-    height: 65vh;
-  }
-  #score, input{
-    padding: 0px;
-    }
-
-  .board button {
-    width: 35px;
-    height: 35px;
-    margin: 7px;
-  }
-}
-
-@media (max-width: 500px) { 
-  #left,#right{
-    visibility: hidden;
-    height: 10%;
-   }
-   #middle{
-     height: 80%;
-     width: 100vw;
-   }
-   .board button{
-     width: 30px;
-     height: 30px;
-     margin: 5px;
-     border: 3px solid black;  
-     border-radius: 50px;
-   }
-   footer, header{
-     font-size: 170%;
-   }
-}
-@media screen and (max-device-width: 500px){
-
-  #left,#right{
-   visibility: hidden;
-   height: 10%;
-  }
-  #middle{
-    height: 80%;
-    width: 100vw;
-  }
-  .board button{
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    border: 3px solid black;  
-    border-radius: 50px;
-  }
-  
-
-}
- 
- */
