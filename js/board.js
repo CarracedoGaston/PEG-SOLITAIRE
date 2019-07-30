@@ -59,6 +59,33 @@ var showSuggestions = function () {
       suggestions.push(possible['bellow'].id)
   }
 }
+//replica
+var showSuggestionsAll = function () {
+    var near = {
+        above: getElement(createId(selectedPeg.x - 1, selectedPeg.y)),
+        left: getElement(createId(selectedPeg.x, selectedPeg.y - 1)),
+        right: getElement(createId(selectedPeg.x, selectedPeg.y + 1)),
+        bellow: getElement(createId(selectedPeg.x + 1, selectedPeg.y)),
+    }
+    var possible = {
+        above: getElement(createId(selectedPeg.x - 2, selectedPeg.y)),
+        left: getElement(createId(selectedPeg.x, selectedPeg.y - 2)),
+        right: getElement(createId(selectedPeg.x, selectedPeg.y + 2)),
+        bellow: getElement(createId(selectedPeg.x + 2, selectedPeg.y)),
+    }
+    if (near.above.className == 'peg' && possible.above.className == 'hole') {
+        suggestions.push(possible['above'].id)
+    }
+    if (near.left.className == 'peg' && possible.left.className == 'hole') {
+        suggestions.push(possible['left'].id)
+    }
+    if (near.right.className == 'peg' && possible.right.className == 'hole') {
+        suggestions.push(possible['right'].id)
+    }
+    if (near.bellow.className == 'peg' && possible.bellow.className == 'hole') {
+        suggestions.push(possible['bellow'].id)
+    }
+  }
 
 var selectPeg = function (evt) {
   suggestions = []
@@ -99,6 +126,22 @@ var movePeg = function (evt) {
           init()
       }
   }
+  listPegs=document.getElementsByClassName('peg')
+  for (var i=0;i < listPegs.length; i++){
+    var peg= listPegs[i]
+    var idParts=peg.id&&peg.id.length ? peg.id.split('-'):[]
+    if(idParts.length===3){
+      selectedPeg.x=parseInt(idParts[1])
+      selectedPeg.y=parseInt(idParts[2])
+      showSuggestionsAll()  
+    }
+   
+  }
+  if(suggestions.length == 0){
+    alert('Perdiste!')
+    modalShowSave()  
+  }
+  suggestions = []
 }
 
 //Reset de board to the original values and the score on -1
@@ -115,8 +158,6 @@ var resetBoard = function(evt){
     ]
     init()
 }
-
-
 
 
 

@@ -48,7 +48,6 @@ var init = function () {
   addSaveEventHandlers(modalAcceptSave)
   var modalAcceptLoad = document.getElementById('acceptLoad')
   addLoadGameEventHandlers(modalAcceptLoad)
- 
 }
 
 window.onload = init
