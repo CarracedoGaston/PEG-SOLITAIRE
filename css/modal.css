@@ -64,9 +64,9 @@
     font-size: 300%;
   }
 }
-@media (max-height: 1500px){
+ @media (max-height: 1200px) and (max-width: 1000px ) {
   #modal{
-    bottom: 30%;
+    bottom: 35%;
     left: 5%;
   }
-}
+} 
