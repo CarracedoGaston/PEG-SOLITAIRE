@@ -11,7 +11,7 @@
     border-radius: 15px 15px 15px 15px;
     border: 10px double #dbf7e9;
     background-color: #49436b;
-    max-height: 100%;
+    max-height: 200%;
 }
 
 #acceptSave, #acceptLoad {
