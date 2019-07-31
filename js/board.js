@@ -139,8 +139,14 @@ var movePeg = function (evt) {
    
   }
   if(suggestions.length == 0){
-    document.getElementById('modalLabel').style.display = "block"
-    modalShowSave()  
+    if(listPegs.length > 1){
+      document.getElementById('modalLabelLose').style.display = "block"
+      modalShowSave()  
+    }
+    else{
+      document.getElementById('modalLabelWin').style.display = "block"
+      modalShowSave()  
+    }
   }
   suggestions = []
   

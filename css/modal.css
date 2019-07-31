@@ -13,11 +13,11 @@
     background-color: #49436b;
 }
 
-#acceptSave, #acceptLoad, #modalLabel {
+#acceptSave, #acceptLoad, #modalLabelLose, #modalLabelWin {
     display: none;
 }
 
-#modalLabel{
+#modalLabelLose, #modalLabelWin{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bolder;
   color: #dbf7e9;
@@ -27,7 +27,7 @@
 
 .modalInput {
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -61,7 +61,7 @@
     width: 87vw;
   }
 
-  #modalLabel{
+  #modalLabelLose, #modalLabelWin{
     font-size: 300%;
   }
   .modalButtons { 

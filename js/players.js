@@ -44,7 +44,8 @@ var modalHide = function(){
   document.getElementById('modal').style.display = "none"
   document.getElementById('acceptLoad').style.display = "none"
   document.getElementById('acceptSave').style.display = "none"
-  document.getElementById('modalLabel').style.display = "none"
+  document.getElementById('modalLabelLose').style.display = "none"
+  document.getElementById('modalLabelWin').style.display = "none"
 }
 //Save the game, and show the laderboard on an alert
 var saveGame = function(evt){
