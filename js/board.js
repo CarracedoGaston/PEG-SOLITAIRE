@@ -124,6 +124,7 @@ var movePeg = function (evt) {
           selectedPeg = { x: undefined, y: undefined }
           suggestions = []
           init()
+          
       }
   }
   listPegs=document.getElementsByClassName('peg')
@@ -138,10 +139,11 @@ var movePeg = function (evt) {
    
   }
   if(suggestions.length == 0){
-    alert('Perdiste!')
+    document.getElementById('modalLabel').style.display = "block"
     modalShowSave()  
   }
   suggestions = []
+  
 }
 
 //Reset de board to the original values and the score on -1
