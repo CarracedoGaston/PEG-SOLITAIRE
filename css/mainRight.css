@@ -30,7 +30,7 @@
 
 #allScore {
   width: 70%;
-  margin-bottom: 6vh;
+  margin-bottom: 2vh;
   height: 8%;
   border-radius: 5px 15px 5px 15px;
   border: 3px solid #dbf7e9;
@@ -41,7 +41,7 @@
 }
 
 table {
-  margin-bottom: 3vh;
+  margin-bottom: 4vh;
   border-radius: 15px 30px 15px 30px;
   background-color: #aea0f5;
   height: 30vh;

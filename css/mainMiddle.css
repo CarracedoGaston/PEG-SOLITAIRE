@@ -34,9 +34,9 @@
 }
 
 .board {
-  border-radius: 15px 70px 15px 70px;
+  border-radius: 15px 15px 15px 15px;
   margin-top: 45px;
-  border: 10px solid #dbf7e9;
+  border: 10px double #dbf7e9;
   background-color: #49436b;  
 }
 

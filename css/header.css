@@ -1,6 +1,6 @@
 header {
   display: flex;
-  z-index: 0;
+  /* z-index: 0; */
   flex-direction: row;
   height: 10vh;
   align-items: center;
@@ -11,7 +11,7 @@ header {
 #leftTitle {
   width: 90vw;
   text-align: center;
-  font-size: 400%;
+  font-size: 350%;
   color: #dbf7e9;
   margin-left: 9vw;
   letter-spacing: 5px;

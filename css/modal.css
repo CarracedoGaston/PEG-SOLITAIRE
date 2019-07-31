@@ -8,9 +8,10 @@
     height: 8vw;
     width: 35vw;
     background-color: black;
-    border-radius: 15px 50px 15px 50px;
-    border: 10px ridge #dbf7e9;
+    border-radius: 15px 15px 15px 15px;
+    border: 10px double #dbf7e9;
     background-color: #49436b;
+    max-height: 100%;
 }
 
 #acceptSave, #acceptLoad {
