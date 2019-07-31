@@ -1,6 +1,6 @@
 #modal {
     display: none;
-    position: fixed;
+    position: absolute;
     flex-direction: column;
     bottom: 79.5%;
     left: 32%;
@@ -11,7 +11,7 @@
     border-radius: 15px 15px 15px 15px;
     border: 10px double #dbf7e9;
     background-color: #49436b;
-    max-height: 200%;
+    /* max-height: 200%; */
 }
 
 #acceptSave, #acceptLoad {
