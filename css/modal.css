@@ -1,6 +1,6 @@
 #modal {
     display: none;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     bottom: 79.5%;
     left: 32%;
@@ -11,7 +11,6 @@
     border-radius: 15px 15px 15px 15px;
     border: 10px double #dbf7e9;
     background-color: #49436b;
-    /* max-height: 200%; */
 }
 
 #acceptSave, #acceptLoad {
@@ -48,7 +47,7 @@
 @media (max-width: 1000px) { 
   #modal {
     bottom: 58.5%;
-    left: 5%;
+    left: 5%; 
     z-index: 1;
     height: 50vw;
     width: 87vw;
@@ -63,5 +62,11 @@
     3px 3px 0 #49436b;
     height: 70%;
     font-size: 300%;
+  }
+}
+@media (max-height: 1700px){
+  #modal{
+    bottom: 30%;
+    left: 5%;
   }
 }
