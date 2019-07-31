@@ -64,7 +64,7 @@
     font-size: 300%;
   }
 }
-@media (max-height: 1700px){
+@media (max-height: 1500px){
   #modal{
     bottom: 30%;
     left: 5%;
