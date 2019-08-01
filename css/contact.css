@@ -33,25 +33,47 @@ img{
     width: 80%;
 }
 a {
-    margin-top: 3px;
+    margin-top: 1vh;
     color: #dbf7e9;
     text-decoration: none;
-    padding: 2px;
   }
 .contactImg{
     height: 5vh;
     width: 5vh;
+    padding-right: 1vh;
+    margin-top: -1vh;
 }
 form{
     display: flex;
     flex-direction: column;
-    padding-top: 24vh;
+    padding-top: 18vh;
     padding-left: 24vh;
    
 }
-input, button{
+input{
     width: 70%;
     margin-bottom: 3vh;
+}
+
+
+#messageInput{
+    height: 20vh;
+}
+
+#sendButton{
+    margin-left: 20%;
+    width: 40%;
+    margin-bottom: 2vh;
+    height: 8%;
+    border-radius: 15px 15px 15px 15px;
+    border: 2px solid grey;
+    background-color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 150%;
+}
+#sendButton:hover{
+    border-color: #aea0f5;
+    color: #aea0f5;
 }
 #info{
     display: flex;
