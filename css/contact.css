@@ -1,32 +1,73 @@
 header{
     width: 100vw;
     height: 10vh;
-    background-color: grey;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #49436b;
+    
+}
+h1{
+    font-size: 300%;
+    color: white;
+    letter-spacing: 5px;
+    padding-top: 1vh;
 }
 main{
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
 }
 #left{
-    display: flex;
-    flex-direction: column;
     width: 60%;
     height: 100%
 }
 #img{
-    background-color: aquamarine;
-    height: 70%;
+    height: 80%;
     width: 100%;
+    padding-left: 8vh;
+    padding-top: 12vh;
+}
+img{
+    height: 80%;
+    width: 80%;
+}
+a {
+    margin-top: 3px;
+    color: #dbf7e9;
+    text-decoration: none;
+    padding: 2px;
+  }
+.contactImg{
+    height: 5vh;
+    width: 5vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 24vh;
+    padding-left: 24vh;
+   
+}
+input, button{
+    width: 70%;
+    margin-bottom: 3vh;
 }
 #info{
-    background-color: green;
-    height: 30%;
+    display: flex;
+    flex-direction: row;
+    height: 60%;
     width: 100%;
+    padding-top: 2vh;
+    justify-content: space-around;
+      
 }
 #right{
     width: 40%;
     height: 100%;
-    background-color: burlywood;
+}
+footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: #49436b;
 }

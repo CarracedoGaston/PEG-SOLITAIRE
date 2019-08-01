@@ -1,6 +1,5 @@
 header {
   display: flex;
-  /* z-index: 0; */
   flex-direction: row;
   height: 10vh;
   align-items: center;
