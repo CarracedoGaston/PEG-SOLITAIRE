@@ -1,6 +1,7 @@
 #leftButtons {
   width: 20vw;
   display: flex;
+  /* visibility: hidden;  */
   flex-direction: column;
   margin-top: 45px;
 }
@@ -10,25 +11,28 @@
   height: 60px;
   margin-left: 30%;
   border-radius: 5px 15px 5px 15px;
-  border: 3px solid #dbf7e9;
-  background-color: #aea0f5;
+  border: 5px solid rgb(39, 39, 39);
+  /* background: repeating-linear-gradient(-90deg,  black 5px, rgb(116, 70, 27) 5px, rgb(165, 101, 42) 10px); */
+
+  /* background: linear-gradient(to bottom,#ffbee9 , white 95%, #a30265); */
+  /* background: linear-gradient(70deg, #ffffff, #f0a0e5);  ffbee6  ffd3be*/ 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 225%;
-  color: #dbf7e9;
+  color: #1b3b48;
   margin-bottom: 20px;
   text-align: left;
   font-weight: bolder;
+  text-align: center;
 }
-
-#saveIcon, #resetIcon, #loadIcon {
-  height: 40px;
-  margin-top: -12px;
-  padding-right: 20px;
-}
-
-#resetIcon {
-  margin-left: -3px;
-}
+ #saveGame{
+  background: linear-gradient(0deg, #fd527d81, #ff55937c);
+ }
+ #resetGame{
+  background: linear-gradient(0deg, #ff9b49a6, #ffb743b9);
+ }
+ #loadGame{
+  background: linear-gradient(0deg, #42a4ffa9, #43d3ffa6);
+ }
  
 @media (max-width: 1000px) { 
   #leftButtons {
@@ -42,11 +46,7 @@
     height: 100px;
     margin-left: 10%;
     font-size: 350%;
-    text-shadow:
-    -3px -3px 0 #49436b,  
-    3px -3px 0 #49436b,
-    -3px 3px 0 #49436b,
-    3px 3px 0 #49436b;
+
   }
 
   #saveIcon, #resetIcon, #loadIcon {

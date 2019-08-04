@@ -52,6 +52,19 @@ var saveGame = function(evt){
   var keys = Object.keys(localStorage)
   var localBoard = JSON.stringify(board)
   var name = document.getElementById('modalInput').value
+  // var letterNumber = /^[0-9a-zA-Z]+$/
+  // ^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$ Alphanumeric
+  // var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/ // email validation
+  // if (regex.test(name)){
+  //   console.log('mail valido') valida mail
+  // }
+  // if(!regex.test(name)){
+  //   console.log('mail no valido')
+  // }
+  if ((name.length > 6) || (name.length < 3)  || (!name.match(/^([0-9]|[a-z])+([0-9a-z]+)$/i))) {
+    alert('The name could be alphanumeric, and must be between 3 and 6 characthers long')
+    return
+  }
   if(!keys.includes(name)){
     localStorage.setItem(name, localBoard)
     // leaderboardAlert()

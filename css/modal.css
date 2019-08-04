@@ -2,16 +2,18 @@
     display: none;
     position: fixed;
     flex-direction: column;
-    bottom: 79.5%;
-    left: 32%;
+    bottom: 34%;
+    left: 33.20%;
     z-index: 1;
-    height: 8vw;
-    width: 35vw;
-    background-color: black;
+    height: 13vw;
+    width: 33vw;
+    /* background: linear-gradient(45deg, #ff529298, #ffc8689a); */
+    /* background-color: #1b3b48; */
+    background: linear-gradient(45deg, #ff5292, #ffc868);
     border-radius: 15px 15px 15px 15px;
-    border: 10px double #dbf7e9;
-    background-color: #49436b;
+    border: 5px solid rgb(39, 39, 39);
 }
+
 
 #acceptSave, #acceptLoad, #modalLabelLose, #modalLabelWin {
     display: none;
@@ -20,7 +22,7 @@
 #modalLabelLose, #modalLabelWin{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bolder;
-  color: #dbf7e9;
+  color: white;
   text-align: center;
   height: 10%;
 }
@@ -45,17 +47,22 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 15px 15px 15px 15px;
     font-weight: bolder;
-    border: 5px solid #dbf7e9;
-    color: #dbf7e9;
-    background-color: #aea0f5;
+    border: 5px solid rgb(39, 39, 39);
+    color: #1b3b48;
     width: 40%;
     height: 80%;
+}
+#acceptSave, #acceptLoad{
+  background: linear-gradient(0deg, #ff9b49, #ffb743);
+}
+#cancel{
+  background: linear-gradient(0deg, #fd527d, #ff5593);
 }
 
 @media (max-width: 1000px) { 
   #modal {
     bottom: 58.5%;
-    left: 5%; 
+    left: 6%; 
     z-index: 1;
     height: 50vw;
     width: 87vw;
@@ -64,13 +71,7 @@
   #modalLabelLose, #modalLabelWin{
     font-size: 300%;
   }
-  .modalButtons { 
-    border-radius: 15px 15px 15px 15px;  
-    text-shadow:
-    -3px -3px 0 #49436b,  
-    3px -3px 0 #49436b,
-    -3px 3px 0 #49436b,
-    3px 3px 0 #49436b;
+  .modalButtons {  
     height: 70%;
     font-size: 300%;
   }

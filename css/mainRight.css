@@ -1,11 +1,12 @@
 #rightLeaders {
   width: 20vw;
   position: relative; 
+  /* visibility: hidden; escondido */
 }
 
 #rightContainer {
   position: absolute;
-  bottom: 0;
+  bottom: 2.5vh;
   width: 100%;
 }
 
@@ -13,7 +14,7 @@
   font-size: 150%;
   vertical-align:middle;
   align-content: center;
-  color: black;
+  color: #200f21;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -33,20 +34,35 @@
   margin-bottom: 2vh;
   height: 8%;
   border-radius: 5px 15px 5px 15px;
-  border: 3px solid #dbf7e9;
-  background-color: #aea0f5;
+  border: 5px solid rgb(39, 39, 39);
+  background: linear-gradient(0deg, #39d5c89f, #42eabab0);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 150%;
-  color: #dbf7e9;
+  color: #1b3b48;
 }
 
+#leader0{
+  background: linear-gradient(0deg, #fd527d81, #ff55937c);
+  border-bottom: 1px solid #9c335a;
+  
+}
+#leader1{
+  background: linear-gradient(0deg, #ff9b49a6, #ffb743b9);
+  border-bottom: 1px solid #ad7d2e;
+}
+#leader2{
+  background: linear-gradient(0deg, #42a4ffa9, #43d3ffa6);
+  border-bottom: 1px solid #296e83;
+}
+#leader3, #leader4{
+  background: linear-gradient(0deg, #39d5c89f, #42eabab0);
+  border-bottom: 1px solid #37a787;
+}
 table {
-  margin-bottom: 4vh;
-  border-radius: 15px 30px 15px 30px;
-  background-color: #aea0f5;
+  margin-bottom: 3.5vh;
   height: 30vh;
   width: 70%;
-  justify-content: first baseline;
+  border: 5px solid rgb(39, 39, 39);
 }
 
 #tableTitle {
@@ -55,6 +71,7 @@ table {
   color: #dbf7e9;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 200%;
+  color: rgb(39, 39, 39);
   text-align: center;
 }
 
@@ -70,14 +87,14 @@ table {
 @media (max-width: 1000px) { 
   #rightLeaders {
     order: 2;
-    margin-left: 50%;
+    margin-left: 54%;
     width: 50%;
   }
 
   #table {
     width: 75%;
     height: 24vh;
-    margin-bottom: 0; 
+    margin-bottom: -30px; 
     margin-left: 8%;
   }
 
@@ -86,12 +103,11 @@ table {
     margin-left: 8%;
     margin-bottom: 1vh;
     font-weight: bolder;
-    text-shadow:
+    /* text-shadow:
     -3px -3px 0 #49436b,  
     3px -3px 0 #49436b,
     -3px 3px 0 #49436b,
-    3px 3px 0 #49436b;
-    color: #dbf7e9;
+    3px 3px 0 #49436b; */
   }
 
   #tableImg, #allScore {
