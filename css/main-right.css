@@ -1,9 +1,9 @@
-#rightLeaders {
+#right-leaders {
   width: 20vw;
   position: relative; 
 }
 
-#rightContainer {
+#right-container {
   position: absolute;
   bottom: 2.5vh;
   width: 100%;
@@ -11,6 +11,7 @@
 
 .name, .score {
   font-size: 150%;
+  height: 20%;
   vertical-align:middle;
   align-content: center;
   color: #200f21;
@@ -28,7 +29,7 @@
   text-align: left;
 }
 
-#allScore {
+#all-score {
   width: 70%;
   margin-bottom: 2vh;
   height: 8%;
@@ -40,22 +41,22 @@
   color: #1b3b48;
 }
 
-#leader0 {
+#leader-0 {
   background: linear-gradient(0deg, #fd527d81, #ff55937c);
   border-bottom: 1px solid #9c335a;
 }
 
-#leader1 {
+#leader-1 {
   background: linear-gradient(0deg, #ff9b49a6, #ffb743b9);
   border-bottom: 1px solid #ad7d2e;
 }
 
-#leader2 {
+#leader-2 {
   background: linear-gradient(0deg, #42a4ffa9, #43d3ffa6);
   border-bottom: 1px solid #296e83;
 }
 
-#leader3, #leader4 {
+#leader-3, #leader-4 {
   background: linear-gradient(0deg, #39d5c89f, #42eabab0);
   border-bottom: 1px solid #37a787;
 }
@@ -64,10 +65,12 @@ table {
   margin-bottom: 3.5vh;
   height: 30vh;
   width: 70%;
+  background-color: rgba(128, 128, 128, 0.082); 
   border: 5px solid rgb(39, 39, 39);
+  
 }
 
-#tableTitle {
+#table-title {
   margin-bottom: 2vh;
   width: 70%;
   color: #dbf7e9;
@@ -77,17 +80,17 @@ table {
   text-align: center;
 }
 
-#tableImg {
+#table-img {
   width: 70%;
   text-align: center;
 }
 
-#topPlayers {
+#top-players {
   height: 100px;
 }
 
 @media (max-width: 1000px) { 
-  #rightLeaders {
+  #right-leaders {
     order: 2;
     margin-left: 54%;
     width: 50%;
@@ -100,14 +103,14 @@ table {
     margin-left: 8%;
   }
 
-  #tableTitle {
+  #table-title {
     font-size: 300%;
     margin-left: 8%;
     margin-bottom: 1vh;
     font-weight: bolder;
   }
 
-  #tableImg, #allScore {
+  #table-img, #all-score {
     display: none;
   }
   

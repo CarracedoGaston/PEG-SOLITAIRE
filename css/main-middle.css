@@ -1,4 +1,4 @@
-#middleBoard {
+#middle-board {
   width: 50vw;
   padding-left: 3vw;
   padding-right: 3vw; 
@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-#gameScore {
+#game-score {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -15,12 +15,12 @@
   color: rgb(39, 39, 39);
 }
 
-#scoreLeft {
+#score-left {
   width: 90%;
   text-align: right;  
 }
 
-#scoreRight {
+#score-right {
   width: 10%;
   text-align: right;  
 }
@@ -69,7 +69,7 @@
 }
 
 @media (max-width: 1000px) { 
-  #middleBoard {
+  #middle-board {
     order: 3;
     width: 100%;
     height: 72%;
@@ -84,7 +84,7 @@
     border-radius: 50px;
   }
 
-  #gameScore {
+  #game-score {
     font-size: 400%;
   }
 

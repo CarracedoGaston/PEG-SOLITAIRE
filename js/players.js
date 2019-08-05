@@ -34,24 +34,24 @@ var leaderboardAlert = function(){
 
 var modalShowSave = function(){
   document.getElementById('modal').style.display = "flex"
-  document.getElementById('acceptSave').style.display = "block"
+  document.getElementById('accept-save').style.display = "block"
 }
 var modalShowLoad = function(){
   document.getElementById('modal').style.display = "flex"
-  document.getElementById('acceptLoad').style.display = "block"
+  document.getElementById('accept-load').style.display = "block"
 }
 var modalHide = function(){
   document.getElementById('modal').style.display = "none"
-  document.getElementById('acceptLoad').style.display = "none"
-  document.getElementById('acceptSave').style.display = "none"
-  document.getElementById('modalLabelLose').style.display = "none"
-  document.getElementById('modalLabelWin').style.display = "none"
+  document.getElementById('accept-load').style.display = "none"
+  document.getElementById('accept-save').style.display = "none"
+  document.getElementById('modal-label-lose').style.display = "none"
+  document.getElementById('modal-label-win').style.display = "none"
 }
 //Save the game, and show the laderboard on an alert
 var saveGame = function(evt){
   var keys = Object.keys(localStorage)
   var localBoard = JSON.stringify(board)
-  var name = document.getElementById('modalInput').value
+  var name = document.getElementById('modal-input').value
   // var letterNumber = /^[0-9a-zA-Z]+$/
   // ^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$ Alphanumeric
   // var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/ // email validation
@@ -88,7 +88,7 @@ var saveGame = function(evt){
 }
 
 var loadGame = function(evt){
-  var name = document.getElementById('modalInput').value
+  var name = document.getElementById('modal-input').value
   var load = localStorage.getItem(name)  
   board = JSON.parse(load)
   modalHide()

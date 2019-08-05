@@ -7,58 +7,79 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/mainLeft.css">
-    <link rel="stylesheet" href="css/mainMiddle.css">
-    <link rel="stylesheet" href="css/mainRight.css">
-    <script src="js/Initialize.js"></script>
+    <link rel="stylesheet" href="css/main-left.css">
+    <link rel="stylesheet" href="css/main-middle.css">
+    <link rel="stylesheet" href="css/main-right.css">
+    <script src="js/initialize.js"></script>
     <script src="js/board.js"></script>
-    <script src="js/generateHtml.js"></script>
+    <script src="js/generate-html.js"></script>
     <script src="js/handlers.js"></script>
     <script src="js/players.js"></script>
   </head>
   <body>   
     <header >
-      <div id="leftTitle">
+      <div id="left-title">
           <h1>Peg-Solitaire</h1> 
       </div>
-      <div id="rightContacts">
-        <a href="https://github.com/CarracedoGaston/Peg-Solitaire"><img src="img/gitHub.png" alt="" class="contactImg"> GitHub</a>
-        <a href="indexContact.html"><img src="img/contactMe.png" alt="" class="contactImg" > Contact</a>
+      <div id="right-contacts">
+        <a href="https://github.com/CarracedoGaston/Peg-Solitaire"><img src="img/gitHub-icon.png" alt="" class="contact-img"> GitHub</a>
+        <a href="index-contact.html"><img src="img/contact-icon.png" alt="" class="contact-img" > Contact</a>
       </div>   
     </header> 
     <div id="modal">
-      <label id=modalLabelWin>Winner, Please save your score!</label>
-      <label id=modalLabelLose>Game Over, Please save your score!</label>
-      <div class="modalInput">
-          <input type="text" class="name" placeholder="Name" id="modalInput">
+      <label id=modal-label-win>Winner, Please save your score!</label>
+      <label id=modal-label-lose>Game Over, Please save your score!</label>
+      <div class="modal-input">
+          <input type="text" class="name" placeholder="Name" id="modal-input">
       </div> 
-      <div id="modalButtons">
-        <button id="acceptSave" class = "modalButtons">Accept</button>
-        <button id="acceptLoad" class = "modalButtons">Accept</button>
-        <button id="cancel" class = "modalButtons">Cancel</button>
+      <div id="modal-buttons">
+        <button id="accept-save" class = "modal-buttons">Accept</button>
+        <button id="accept-load" class = "modal-buttons">Accept</button>
+        <button id="cancel" class = "modal-buttons">Cancel</button>
       </div>  
     </div>
     <main>
-      <div id="leftButtons">
-          <button id="saveGame" class="leftButtons">  Save</button>
-          <button id="resetGame" class="leftButtons">Reset</button>
-          <button id="loadGame" class="leftButtons">Load</button>
+      <div id="left-buttons">
+          <button id="save-game" class="left-buttons">  Save</button>
+          <button id="reset-game" class="left-buttons">Reset</button>
+          <button id="load-game" class="left-buttons">Load</button>
       </div>
-      <div id="middleBoard">
-        <div id="midContainer">
+      <div id="middle-board">
+        <div id="mid-container">
             <div id="board" class="board"></div>
-            <div id="gameScore">
-                <div id="scoreLeft">SCORE</div>
-                <div id="scoreRight"></div>
+            <div id="game-score">
+                <div id="score-left">SCORE</div>
+                <div id="score-right"></div>
             </div>
         </div>  
       </div>
-      <div id="rightLeaders">
-        <div id="rightContainer">
-            <div id="tableImg"><img src="img/topPlayers.png" alt="" id = "topPlayers"></div>
-            <div id="tableTitle">Top Players</div>
-            <table id="table"></table>
-            <button id="allScore">All Scores</button>
+      <div id="right-leaders">
+        <div id="right-container">
+            <div id="table-img"><img src="img/top-players.png" alt="" id = "top-players"></div>
+            <div id="table-title">Top Players</div>
+            <table id="table">
+              <tr id = "leader-0" class = "position"> 
+                <td class = "name" id = "leader-name-0"></td>
+                <td class = "score" id = "leader-score-0"></td>
+              </tr> 
+              <tr id = "leader-1" class = "position"> 
+                <td class = "name"  id = "leader-name-1"></td>
+                <td class = "score" id = "leader-score-1"></td>
+              </tr> 
+              <tr id = "leader-2" class = "position"> 
+                <td class = "name" id = "leader-name-2"></td>
+                <td class = "score" id = "leader-score-2"></td>
+              </tr> 
+              <tr id = "leader-3" class = "position"> 
+                <td class = "name" id = "leader-name-3"></td>
+                <td class = "score" id = "leader-score-3"></td>
+              </tr> 
+              <tr id = "leader-4" class = "position"> 
+                <td class = "name" id = "leader-name-4"></td>
+                <td class = "score" id = "leader-score-4"></td>
+              </tr> 
+            </table>
+            <button id="all-score">All Scores</button>
         </div>
       </div>  
     </main>  

@@ -10,7 +10,7 @@ header {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#leftTitle {
+#left-title {
   width: 90vw;
   text-align: center;
   font-size: 350%;
@@ -19,7 +19,7 @@ header {
   margin-top: -10px;
 }
 
-#rightContacts {
+#right-contacts {
   display: flex;
   flex-direction: column;
   width: 10vw;
@@ -32,20 +32,20 @@ a {
   padding: 2px;
 }
 
-.contactImg {
+.contact-img {
   height: 20px;
   padding: 2px;
   margin-top: -4px;
 }
 
 @media (max-width: 1000px) {
-  #leftTitle {
+  #left-title {
     width: 75vw;
     font-size: 600%;
     text-align: left;
   }
 
-  #rightContacts {
+  #right-contacts {
     display: flex;
     flex-direction: column;
     font-size: 200%;
@@ -53,7 +53,7 @@ a {
     width: 25vw;
   }
 
-  .contactImg {
+  .contact-img {
     height: 40px;
     padding: 4px;
     margin-left: 16px;

@@ -1,11 +1,11 @@
-#leftButtons {
+#left-buttons {
   width: 20vw;
   display: flex;
   flex-direction: column;
   margin-top: 45px;
 }
 
-.leftButtons {
+.left-buttons {
   width: 70%;
   height: 60px;
   margin-left: 30%;
@@ -20,39 +20,39 @@
   text-align: center;
 }
 
- #saveGame {
+ #save-game {
   background: linear-gradient(0deg, #fd527d81, #ff55937c);
  }
 
- #resetGame {
+ #reset-game {
   background: linear-gradient(0deg, #ff9b49a6, #ffb743b9);
  }
 
- #loadGame {
+ #load-game {
   background: linear-gradient(0deg, #42a4ffa9, #43d3ffa6);
  }
  
 @media (max-width: 1000px) { 
-  #leftButtons {
+   #left-buttons {
     order: 1;
     width: 40%;
     height: 28%;
-  }
+  } 
 
-  .leftButtons {
+  .left-buttons {
     width: 80%;
     height: 100px;
     margin-left: 10%;
     font-size: 350%;
   }
 
-  #saveIcon, #resetIcon, #loadIcon {
+  /* #save-icon, #reset-icon, #load-icon {
     height: 80%;
     margin-top: -12px;
     padding-right: 10%;
-  }
+  }  */
 
-  #saveGame, #resetGame, #loadGame {
+   #save-game, #reset-game, #load-game {
     margin-bottom: 10%;
   }
 }

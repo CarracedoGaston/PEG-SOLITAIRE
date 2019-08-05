@@ -140,11 +140,11 @@ var movePeg = function (evt) {
   }
   if(suggestions.length == 0){
     if(listPegs.length > 1){
-      document.getElementById('modalLabelLose').style.display = "block"
+      document.getElementById('modal-label-lose').style.display = "block"
       modalShowSave()  
     }
     else{
-      document.getElementById('modalLabelWin').style.display = "block"
+      document.getElementById('modal-label-win').style.display = "block"
       modalShowSave()  
     }
   }

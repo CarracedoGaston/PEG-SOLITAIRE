@@ -42,9 +42,11 @@ var generateLeaderboard = function(){
     list.sort(majortoMinor)
     list.splice(5)
     for(var i = 0; i < list.length; i++){
-        html += "<tr id= leader" + i + " class = 'position'><td class = 'name'>" +  list[i].name +  "</td><td class = 'score'>" + list[i].score+ "</td></tr>"
+    var htmlName = document.getElementById("leader-name-" + i)
+    var htmlScore = document.getElementById("leader-score-" + i)
+    htmlName.innerHTML = list[i].name
+    htmlScore.innerHTML = list[i].score
     }
-    return html.toString()
 }
 
 var majortoMinor = function(a, b){
