@@ -1,5 +1,6 @@
 header{
     width: 100vw;
+    vertical-align: middle;
     height: 9.8vh;
     text-align: center;
     border-bottom: 0.2vh solid black;
@@ -11,7 +12,7 @@ h1{
     font-size: 350%;
     color: white;
     letter-spacing: 5px;
-    padding-bottom: 1vh;
+    padding-top: 1vh; 
 }
 main{
     display: flex;
@@ -41,7 +42,7 @@ a {
     color:  #1b3b48;
 }
 #left img {
-    border: 5px solid #1b3b48;
+    border: 4px solid #1b3b48;
 }
 .contact-img{
     height: 5vh;
@@ -52,13 +53,14 @@ a {
 form{
     display: flex;
     flex-direction: column;
-    padding-top: 14vh;
-    padding-left: 24vh;
+    height: 60%;
+    width: 80%;
+    align-items: center;
 }
 input{
     width: 70%;
     height: 30px;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
     border: 2px solid  #1b3b48;
 }
 
@@ -68,20 +70,23 @@ input{
     
 }
 
-#send-button{
-    margin-left: 15%; 
+#right a{
+    margin-left: 4%; 
+    text-align: center;
+    padding-top: 1.5%;
     width: 40%;
-    margin-bottom: 2vh;
-    height: 8%;
+    margin-top: 3.75vh; 
+    margin-bottom: -1vh;
+    height: 10%;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #1b3b48;
     background-color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 150%;
 }
-#send-button:hover{
-    border-color: #aea0f5;
-    color: #aea0f5;
+    #right a:hover{
+    border-color: #fdb939;
+    color: #fdb939;
 }
 #info{
     display: flex;
@@ -89,12 +94,14 @@ input{
     height: 65%;
     width: 100%;
     padding-top: 2vh;
-    justify-content: space-around;
-      
+    justify-content: space-around;   
 }
 #right{
     width: 40%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 footer{
     width: 100vw;
@@ -117,36 +124,45 @@ footer{
         height: 30vh;
         width: 100%;
     }
+    form{
+        margin-top: 5vh; 
+        height: 100%;
+    }
     #right{
         height: 50vh;
         width: 100%;
     }
 
     h1{
-        font-size: 200%;
+        font-size: 230%;
         padding-top: 2vh;
+        letter-spacing: 1px;
     }
     #left{
         width: 100%;
         text-align: center; 
     }
-    form{
-        padding-top: 3vh;
-        padding-left: 0;
-        display: flex;
-        align-items: center;
-    }  
-    
-    #message-input{
-        height: 16vh;
+    input{
+        width: 90%;
+        height: 4vh;
+        margin-bottom: 2vh;
+        border: 2px solid  #1b3b48;
     }
-    
     #send-button{
-        margin-left: 4%; 
+        margin-left: 0; 
+        width: 20vh;
+        margin-bottom: -5vh; 
+        height: 8vh;
     }
     footer{
         height: 10vh;
 
+    }
+    
+    
+    #message-input{
+        height: 16vh;
+        
     }
     
   }

@@ -3,10 +3,10 @@
     position: fixed;
     flex-direction: column;
     bottom: 32%;
-    left: 34.25vw;;
+    left: 31vw;;
     z-index: 1;
-    height: 160px;
-    width: 420px;
+    height: 28vh;
+    width: 38vw;
     background: linear-gradient(45deg, #ff5292, #ffc868);
     border-radius: 15px 15px 15px 15px;
     border: 5px solid rgb(39, 39, 39);
