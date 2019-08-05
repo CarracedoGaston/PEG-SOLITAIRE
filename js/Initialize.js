@@ -34,8 +34,6 @@ var init = function () {
   addHolesEventHandlers(holes)
   var score = document.getElementById('score-right')
   score.innerHTML = generateScore()
-  // var leader = document.getElementById('table')
-  // leader.innerHTML = generateLeaderboard()
   generateLeaderboard()
   var reset = document.getElementById('reset-game')
   addResetEventHandlers(reset)
