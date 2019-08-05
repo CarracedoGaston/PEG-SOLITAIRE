@@ -62,7 +62,7 @@ var saveGame = function(evt){
   //   console.log('mail no valido')
   // }
   if ((name.length > 6) || (name.length < 3)  || (!name.match(/^([0-9]|[a-z])+([0-9a-z]+)$/i))) {
-    alert('The name could be alphanumeric, and must be between 3 and 6 characthers long')
+    alert('The name could be alphanumeric, and must be between 3 and 6 characters long')
     return
   }
   if(!keys.includes(name)){
@@ -76,13 +76,11 @@ var saveGame = function(evt){
     if(playerScore(boardSaved) < generateScore()){
       localStorage.setItem(name, localBoard)
       // leaderboardAlert()
-      init()
-      
+      init()  
     }
     else{
       alert('Este jugador ya tiene un record de ' + playerScore(boardSaved).toString() ) 
-    }
-    
+    }   
   }
   modalHide()
 }

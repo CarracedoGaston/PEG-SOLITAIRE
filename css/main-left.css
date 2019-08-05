@@ -35,22 +35,16 @@
 @media (max-width: 1000px) { 
    #left-buttons {
     order: 1;
-    width: 40%;
+    width: 50vw;
     height: 28%;
   } 
 
   .left-buttons {
-    width: 80%;
+    width: 70%;
     height: 100px;
     margin-left: 10%;
     font-size: 350%;
   }
-
-  /* #save-icon, #reset-icon, #load-icon {
-    height: 80%;
-    margin-top: -12px;
-    padding-right: 10%;
-  }  */
 
    #save-game, #reset-game, #load-game {
     margin-bottom: 10%;

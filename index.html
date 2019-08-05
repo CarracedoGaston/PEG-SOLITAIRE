@@ -19,18 +19,18 @@
   <body>   
     <header >
       <div id="left-title">
-          <h1>Peg-Solitaire</h1> 
+        <h1>Peg-Solitaire</h1> 
       </div>
       <div id="right-contacts">
-        <a href="https://github.com/CarracedoGaston/Peg-Solitaire"><img src="img/gitHub-icon.png" alt="" class="contact-img"> GitHub</a>
-        <a href="index-contact.html"><img src="img/contact-icon.png" alt="" class="contact-img" > Contact</a>
+        <a href="https://github.com/CarracedoGaston/Peg-Solitaire" target="_blank"><img src="img/gitHub-icon.png" class="contact-img">GitHub</a>
+        <a href="index-contact.html" target="_blank"><img src="img/contact-icon.png" class="contact-img">Contact</a>
       </div>   
     </header> 
     <div id="modal">
-      <label id=modal-label-win>Winner, Please save your score!</label>
-      <label id=modal-label-lose>Game Over, Please save your score!</label>
+      <label id="modal-label-win">Winner, Please save your score!</label>
+      <label id="modal-label-lose">Game Over, Please save your score!</label>
       <div class="modal-input">
-          <input type="text" class="name" placeholder="Name" id="modal-input">
+        <input id="modal-input" class="name" type="text" placeholder="Name">
       </div> 
       <div id="modal-buttons">
         <button id="accept-save" class = "modal-buttons">Accept</button>
@@ -40,46 +40,48 @@
     </div>
     <main>
       <div id="left-buttons">
-          <button id="save-game" class="left-buttons">  Save</button>
-          <button id="reset-game" class="left-buttons">Reset</button>
-          <button id="load-game" class="left-buttons">Load</button>
+        <button id="save-game" class="left-buttons">Save</button>
+        <button id="reset-game" class="left-buttons">Reset</button>
+        <button id="load-game" class="left-buttons">Load</button>
       </div>
       <div id="middle-board">
         <div id="mid-container">
-            <div id="board" class="board"></div>
-            <div id="game-score">
-                <div id="score-left">SCORE</div>
-                <div id="score-right"></div>
-            </div>
+          <div id="board" class="board"></div>
+          <div id="game-score">
+            <div id="score-left">SCORE</div>
+            <div id="score-right"></div>
+          </div>
         </div>  
       </div>
       <div id="right-leaders">
         <div id="right-container">
-            <div id="table-img"><img src="img/top-players.png" alt="" id = "top-players"></div>
-            <div id="table-title">Top Players</div>
-            <table id="table">
-              <tr id = "leader-0" class = "position"> 
-                <td class = "name" id = "leader-name-0"></td>
-                <td class = "score" id = "leader-score-0"></td>
-              </tr> 
-              <tr id = "leader-1" class = "position"> 
-                <td class = "name"  id = "leader-name-1"></td>
-                <td class = "score" id = "leader-score-1"></td>
-              </tr> 
-              <tr id = "leader-2" class = "position"> 
-                <td class = "name" id = "leader-name-2"></td>
-                <td class = "score" id = "leader-score-2"></td>
-              </tr> 
-              <tr id = "leader-3" class = "position"> 
-                <td class = "name" id = "leader-name-3"></td>
-                <td class = "score" id = "leader-score-3"></td>
-              </tr> 
-              <tr id = "leader-4" class = "position"> 
-                <td class = "name" id = "leader-name-4"></td>
-                <td class = "score" id = "leader-score-4"></td>
-              </tr> 
-            </table>
-            <button id="all-score">All Scores</button>
+          <div id="table-img">
+            <img src="img/top-players.png" id="top-players">
+          </div>
+          <div id="table-title">Top Players</div>
+          <table>
+            <tr id="leader-0" > 
+              <td id="leader-name-0" class="name"></td>
+              <td id="leader-score-0" class="score"></td>
+            </tr> 
+            <tr id = "leader-1" > 
+              <td id="leader-name-1" class="name"></td>
+              <td id="leader-score-1" class="score"></td>
+            </tr> 
+            <tr id="leader-2" > 
+              <td id="leader-name-2" class="name"></td>
+              <td id="leader-score-2" class="score"></td>
+            </tr> 
+            <tr id="leader-3"> 
+              <td id="leader-name-3" class="name"></td>
+              <td id="leader-score-3" class="score"></td>
+            </tr> 
+            <tr id="leader-4" > 
+              <td id="leader-name-4" class="name"></td>
+              <td id="leader-score-4" class="score"></td>
+            </tr> 
+          </table>
+          <button id="all-score">All Scores</button>
         </div>
       </div>  
     </main>  
