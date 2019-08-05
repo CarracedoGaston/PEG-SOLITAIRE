@@ -1,13 +1,15 @@
 header{
     width: 100vw;
-    height: 10vh;
+    height: 9.8vh;
     text-align: center;
-    vertical-align: middle;
-    background-color: #49436b;
-    
+    border-bottom: 0.2vh solid black;
+    font-weight: bolder;
+    background-color: #1b3b48;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 h1{
-    font-size: 300%;
+    font-size: 350%;
     color: white;
     letter-spacing: 5px;
     padding-top: 1vh;
@@ -16,27 +18,29 @@ main{
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 80vh;
+    height: 82vh;
+    background: linear-gradient(45deg, #ff649d57, #f5c779dc);
 }
 #left{
     width: 60%;
-    height: 100%
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    
 }
-#img{
-    height: 80%;
-    width: 100%;
-    padding-left: 8vh;
-    padding-top: 12vh;
-}
-img{
-    height: 80%;
-    width: 80%;
-}
+
+img{ 
+    width: 90%; 
+}  
 a {
     margin-top: 1vh;
     color: #dbf7e9;
     text-decoration: none;
   }
+#mailto{
+    color:  #1b3b48;
+}
 .contactImg{
     height: 5vh;
     width: 5vh;
@@ -46,27 +50,30 @@ a {
 form{
     display: flex;
     flex-direction: column;
-    padding-top: 18vh;
+    padding-top: 16vh;
     padding-left: 24vh;
-   
 }
 input{
     width: 70%;
+    height: 30px;
     margin-bottom: 3vh;
+    border: 2px solid  #1b3b48;
 }
 
 
 #messageInput{
-    height: 20vh;
+    height: 27vh;
+    
 }
 
 #sendButton{
-    margin-left: 20%;
+    margin-left: 15%; 
+    
     width: 40%;
     margin-bottom: 2vh;
     height: 8%;
     border-radius: 15px 15px 15px 15px;
-    border: 2px solid grey;
+    border: 2px solid #1b3b48;
     background-color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 150%;
@@ -78,7 +85,7 @@ input{
 #info{
     display: flex;
     flex-direction: row;
-    height: 60%;
+    height: 65%;
     width: 100%;
     padding-top: 2vh;
     justify-content: space-around;
@@ -90,6 +97,55 @@ input{
 }
 footer{
     width: 100vw;
-    height: 10vh;
-    background-color: #49436b;
+    height: 8vh;
+    background-color: #1b3b48;
 }
+
+@media (max-width: 1000px) { 
+    main {
+      flex-direction: column;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    #left{
+        height: 30vh;
+        width: 100%;
+    }
+    #right{
+        height: 50vh;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 200%;
+        padding-top: 2vh;
+    }
+    #left{
+        width: 100%;
+        text-align: center; 
+    }
+    form{
+        padding-top: 0;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+    }  
+    
+    #messageInput{
+        height: 16vh;
+    }
+    
+    #sendButton{
+        margin-left: 4%; 
+    }
+    footer{
+        height: 10vh;
+
+    }
+    
+  }

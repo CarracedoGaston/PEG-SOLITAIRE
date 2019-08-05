@@ -29,7 +29,6 @@
   width: 6vh;
   height: 6vh;
   margin: 1.5vh;
-  /* border: 3px solid;    */
   border-radius: 50px;
 }
 
@@ -37,11 +36,7 @@
   border-radius: 15px 15px 15px 15px;
   margin-top: 45px;
   border: 10px solid rgb(39, 39, 39);
-   background-color: #1b3b48; 
-  /* background: linear-gradient(45deg, #ff5291, #ffc768); */
-  /* background: repeating-linear-gradient(-90deg,  black 5px, rgb(116, 70, 27) 5px, rgb(165, 101, 42) 10px); */
-  /* border: 10px double #dbf7e9; */
-  /* background: linear-gradient(90deg, rgb(155, 89, 4), rgba(173, 92, 0, 0.603)); */
+  background-color: #1b3b48; 
 }
 
 .board button.hidden {
@@ -66,7 +61,6 @@
 .board button.peg:hover {
   background: radial-gradient( #69afff,  #2b2929);
   border: 1px solid #97ffe9 ; 
-
 }
 
 .board button.suggestion {
