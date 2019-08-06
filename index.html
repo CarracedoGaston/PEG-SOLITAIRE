@@ -11,7 +11,8 @@
 		<script src="js/board.js"></script>
 		<script src="js/generate-html.js"></script>
 		<script src="js/handlers.js"></script>
-		<script src="js/players.js"></script>
+		<script src="js/game-functionalitys.js"></script>
+		<script src="js/change-css.js"></script>
 	</head>
 	<body>   
 		<header >
@@ -19,20 +20,20 @@
 				<h1>Peg-Solitaire</h1> 
 			</div>
 			<div id="right-contacts">
-				<a href="https://github.com/CarracedoGaston/Peg-Solitaire" target="_blank"><img src="img/gitHub-icon.png" class="contact-img">GitHub</a>
-				<a href="index-contact.html" target="_blank"><img src="img/contact-icon.png" class="contact-img">Contact</a>
+				<a href="https://github.com/CarracedoGaston/Peg-Solitaire" target="_blank"><img class="contact-img" src="img/gitHub-icon.png">GitHub</a>
+				<a href="index-contact.html" target="_blank"><img class="contact-img" src="img/contact-icon.png">Contact</a>
 			</div>   
 		</header> 
 		<div id="modal">
 			<label id="modal-label-win">Winner, Please save your score!</label>
 			<label id="modal-label-lose">Game Over, Please save your score!</label>
 			<div id="modal-input">
-				<input type="text" placeholder="Name">
+				<input id="save-input" type="text" placeholder="Name">
 			</div> 
 			<div id="modal-buttons">
-				<button id="accept-save" class = "modal-buttons">Accept</button>
-				<button id="accept-load" class = "modal-buttons">Accept</button>
-				<button id="cancel" class = "modal-buttons">Cancel</button>
+				<button id="accept-save" class="modal-buttons">Accept</button>
+				<button id="accept-load" class="modal-buttons">Accept</button>
+				<button id="cancel" class="modal-buttons">Cancel</button>
 			</div>  
 		</div>
 		<main>
@@ -53,30 +54,30 @@
 			<div id="right-main">
 				<div id="right-container">
 					<div id="table-img">
-						<img src="img/top-players.png" id="top-players">
+						<img id="top-players" src="img/top-players.png">
 					</div>
 					<div id="table-title">Top Players</div>
-					<table>
+					<table id="table">
 						<tr id="leader-0"> 
 							<td id="leader-name-0" class="name"></td>
 							<td id="leader-score-0" class="score"></td>
 						</tr> 
-						<tr id = "leader-1" > 
+						<tr id="leader-1"> 
 							<td id="leader-name-1" class="name"></td>
 							<td id="leader-score-1" class="score"></td>
 						</tr> 
-						<tr id="leader-2" > 
+						<tr id="leader-2"> 
 							<td id="leader-name-2" class="name"></td>
 							<td id="leader-score-2" class="score"></td>
 						</tr> 
-						<tr id="leader-3"> 
+						<tr id="leader-3" class="third-leader"> 
 							<td id="leader-name-3" class="name"></td>
 							<td id="leader-score-3" class="score"></td>
 						</tr> 
-						<tr id="leader-4" > 
+						<tr id="leader-4" class="third-leader"> 
 							<td id="leader-name-4" class="name"></td>
 							<td id="leader-score-4" class="score"></td>
-						</tr> 
+						</tr>  
 					</table>
 					<button id="all-score">All Scores</button>
 				</div>
