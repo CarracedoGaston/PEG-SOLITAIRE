@@ -1,11 +1,9 @@
 //Get the board of a player saved
 var playerBoard = function(player) {
-  var boardsaved
   var load = localStorage.getItem(player)
-  boardsaved = JSON.parse(load)
+  var boardsaved = JSON.parse(load)
   return boardsaved
 }
-
 //Calculate the score of a player saved, using a board
 var playerScore = function(boardSaved) {
   var score = -1 //the score start on -1 because the game start with a hole, so the score become 0 on the start
