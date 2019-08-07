@@ -72,7 +72,7 @@ var resetBoard = function() {
 }
 
 var winnerResetBoard = function() {
-  if((document.getElementById('modal-label-win').style.display == 'block') && (playerScore(board) == 31)){
+  if((document.getElementById('modal-label-win').style.display == 'block') && (playerScore(board) == 31)) {
     resetBoard()
   }
 }

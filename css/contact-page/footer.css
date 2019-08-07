@@ -19,7 +19,7 @@ footer {
   padding-top: 2vh;
 }
 
-.contact-img{ 
+.contact-img { 
   width: 5vh;
   height: 5vh;
   margin-top: -1vh;
@@ -31,7 +31,7 @@ footer {
     height: 10vh;
   }
   
-  #info a{
+  #info a {
     font-size: 250%;
   }
 }
