@@ -38,7 +38,7 @@ a {
   padding: 2px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1000px) {
   #left-title {
     width: 75vw;
     font-size: 600%;
@@ -59,8 +59,4 @@ a {
     margin-left: 16px;
     padding: 4px;
   }
-}
-
-
-
-  
+}  

@@ -17,7 +17,7 @@ var modalHide = function() {
 }
 
 var topTenScores = function() {
-  if(expandLeaderboard){
+  if(expandLeaderboard) {
     document.getElementById('table').style.height = '65vh'
     document.getElementById('table').style.width = '100%'
     document.getElementById('table-img').style.display = 'none'
@@ -34,7 +34,7 @@ var topTenScores = function() {
     }
     expandLeaderboard = false
   }
-  else{
+  else {
     document.getElementById('table').style.height = '30vh'
     document.getElementById('table').style.width = '70%'
     document.getElementById('table-img').style.display = 'block'

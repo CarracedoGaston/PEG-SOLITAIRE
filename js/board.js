@@ -2,7 +2,7 @@ var createId = function(rowN, colN) {
   return 'peg-' + rowN + '-' + colN
 }
 
-var getPositionFromId = function (id) {
+var getPositionFromId = function(id) {
   var idParts = id && id.length ? id.split('-') : []
   if (idParts.length === 3) {
     return {
@@ -129,7 +129,7 @@ var movePeg = function(evt) {
   }
   for (var i = 0; i < listPegs.length; i++) {
     var peg = listPegs[i]
-    var idParts = peg.id && peg.id.length ? peg.id.split('-'):[]
+    var idParts = peg.id && peg.id.length ? peg.id.split('-') : []
     if(idParts.length === 3) {
       selectedPeg.x = parseInt(idParts[1])
       selectedPeg.y = parseInt(idParts[2])
@@ -148,11 +148,3 @@ var movePeg = function(evt) {
   }
   suggestions = []  
 }
-
-
-
-
-
-
-
-

@@ -37,4 +37,3 @@ var hideModalEventHandlers = function(modal) {
 var allScoresButton = function(leaderboards) {
   leaderboards.onclick = topTenScores
 }
-
