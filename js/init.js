@@ -12,6 +12,8 @@ var selectedPeg = { x: undefined, y: undefined }
 
 var suggestions = []
 
+var expandLeaderboard = true
+
 var init = function () {
   var boardElement = document.getElementById('board')
   var score = document.getElementById('score-right')
