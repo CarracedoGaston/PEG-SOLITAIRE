@@ -4,6 +4,7 @@ var playerBoard = function(player) {
   var boardsaved = JSON.parse(load)
   return boardsaved.boardToSave
 }
+
 //Calculate the score of a player saved, using a board
 var playerScore = function(boardSaved) {
   var score = -1 //the score start on -1 because the game start with a hole, so the score become 0 on the start
@@ -24,14 +25,17 @@ var saveGame = function() {
   var objectBoardDate = {boardToSave: board, dateToSave: date}
   var boardDate = JSON.stringify(objectBoardDate)
   var name = document.getElementById('save-input').value
-  if ((name.length > 6) || (name.length < 3)  || (!name.match(/^([0-9]|[a-z])+([0-9a-z]+)$/i))) {
+  //validation of a name alphanumeric, between 3 and 5 characters long
+  if ((name.length > 5) || (name.length < 3)  || (!name.match(/^([0-9]|[a-z])+([0-9a-z]+)$/i))) {
     alert('The name could be alphanumeric, and must be between 3 and 6 characters long')
     return
   }
+  //save the name and his boardDate if the name doesn`t exist on the localstorage
   if(!keys.includes(name)) {
     localStorage.setItem(name, boardDate)
     init()
   }
+  //overwrite de boardDate of a player, if the actual score is bigger than his last saved
   if(keys.includes(name)) {
     var load = localStorage.getItem(name)  
     boardDateSaved = JSON.parse(load)

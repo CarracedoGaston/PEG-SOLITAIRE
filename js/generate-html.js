@@ -30,6 +30,7 @@ var generateBoard = function () {
   html += '</div>'
   return html
 }
+
 //create a leaderboard of the top 5 players
 var generateLeaderboard = function() {
   var keys = Object.keys(localStorage)
@@ -46,6 +47,7 @@ var generateLeaderboard = function() {
     htmlScore.innerHTML = list[i].score
   }
 }
+
 //Function used to order a list from major to minor
 var majortoMinor = function(a, b) {
     return b.score - a.score
