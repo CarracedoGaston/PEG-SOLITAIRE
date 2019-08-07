@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/contact-page/main.css">
     <link rel="stylesheet" href="css/contact-page/footer.css">
     <link rel="stylesheet" href="css/contact-page/header.css">
+    <script src="js/init-contact-page.js"></script>
   </head>
   <body>
     <header>
@@ -21,16 +22,16 @@
       <div id="right">
         <form>
           <input id="name-input" type="text" placeholder="Name">
-          <input id="email-input" type="text" placeholder="Email">
-          <input id="message-input" type="text">
-          <a href="mailto:tumail@gmail.com?&subject=Asunto%20hola&body=Este%20es%20el%20mensaje">Send</a>
+          <input id="subject-input" type="text" placeholder="Subject">
+          <textarea  id="message-input" cols="30" rows="10"></textarea>
+          <a id="send-button" href="">Send</a>
         </form>
       </div>
     </main>
     <footer>
       <div id="info">
-        <a href="https://github.com/CarracedoGaston/Peg-Solitaire"><img class="contact-img" src="img/gitHub-icon.png">GitHub</a>
-        <a href="index-contact.html"><img class="contact-img" src="img/contact-icon.png">Contact</a>
+        <h2>Carracedo Gaston</h2>
+        <a href="https://github.com/CarracedoGaston/Peg-Solitaire" target="_blank"><img class="contact-img" src="img/gitHub-icon.png">GitHub</a>
       </div>
     </footer>
   </body>

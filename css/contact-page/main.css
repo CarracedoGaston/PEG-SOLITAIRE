@@ -14,11 +14,15 @@ form {
   height: 60%;
 }
   
-input {
+input, textarea {
   width: 70%;
   height: 30px;
   margin-bottom: 2vh;
   border: 2px solid  #1b3b48;
+}
+
+textarea {
+  font-size: 200%;
 }
 
 #left {
@@ -79,12 +83,16 @@ input {
     margin-top: 5vh; 
   }
 
-  input {
+  input, textarea {
     width: 90%;
     height: 4vh;
     margin-bottom: 2vh;
     border: 5px solid  #1b3b48;
     font-size: 250%;
+  }
+
+  textarea {
+    font-size: 400%;
   }
 
   #left {

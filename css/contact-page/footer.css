@@ -10,6 +10,12 @@ footer {
   background-color: #1b3b48;
 }
 
+h2{
+  font-size: 150%;
+  color: white;
+  letter-spacing: 3px;
+}
+
 #info {
   display: flex;
   flex-direction: row;
@@ -20,8 +26,7 @@ footer {
 }
 
 .contact-img { 
-  width: 5vh;
-  height: 5vh;
+  height: 80%;
   margin-top: -1vh;
   padding-right: 1vh;
 }
@@ -30,8 +35,21 @@ footer {
   footer {
     height: 10vh;
   }
+
+  h2 {
+    padding-top: 2vh;
+    font-size: 300%;
+    letter-spacing: 1px;
+  }
   
   #info a {
+    width: 30%;
+    margin-top: 2.25vh;
+    margin-right: -5vw;
     font-size: 250%;
+  }
+
+  .contact-img {
+    height: 60%;
   }
 }

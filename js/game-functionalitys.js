@@ -44,7 +44,7 @@ var saveGame = function() {
       init()  
     }
     else {
-      alert('Este jugador ya tiene un record de ' + playerScore(boardDateSaved.boardToSave).toString() ) 
+      alert('Este jugador ya tiene un record de ' + playerScore(boardDateSaved.boardToSave).toString()) 
      }   
   }
   modalHide()
