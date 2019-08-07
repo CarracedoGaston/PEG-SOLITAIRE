@@ -27,7 +27,7 @@ var unselectPeg = function() {
 		  suggestion[i].className = 'hole'
 	  }
 	}
-	init()
+	// init()
 }
 
 var showSuggestions = function() {

@@ -2,7 +2,7 @@
 var playerBoard = function(player) {
   var load = localStorage.getItem(player)
   var boardsaved = JSON.parse(load)
-  return boardsaved
+  return boardsaved.boardToSave
 }
 //Calculate the score of a player saved, using a board
 var playerScore = function(boardSaved) {
@@ -19,26 +19,29 @@ var playerScore = function(boardSaved) {
 
 var saveGame = function() {
   var keys = Object.keys(localStorage)
-  var localBoard = JSON.stringify(board)
+  var actualDate = new Date
+  var date = actualDate.getDate() + '/' + actualDate.getMonth() + '/' + actualDate.getFullYear()
+  var objectBoardDate = {boardToSave: board, dateToSave: date}
+  var boardDate = JSON.stringify(objectBoardDate)
   var name = document.getElementById('save-input').value
   if ((name.length > 6) || (name.length < 3)  || (!name.match(/^([0-9]|[a-z])+([0-9a-z]+)$/i))) {
     alert('The name could be alphanumeric, and must be between 3 and 6 characters long')
     return
   }
   if(!keys.includes(name)) {
-    localStorage.setItem(name, localBoard)
+    localStorage.setItem(name, boardDate)
     init()
   }
   if(keys.includes(name)) {
     var load = localStorage.getItem(name)  
-    boardSaved = JSON.parse(load)
-    if(playerScore(boardSaved) < playerScore(board)) {
-      localStorage.setItem(name, localBoard)
+    boardDateSaved = JSON.parse(load)
+    if(playerScore(boardDateSaved.boardToSave) < playerScore(board)) {
+      localStorage.setItem(name, boardDate)
       init()  
     }
     else {
-      alert('Este jugador ya tiene un record de ' + playerScore(boardSaved).toString() ) 
-    }   
+      alert('Este jugador ya tiene un record de ' + playerScore(boardDateSaved.boardToSave).toString() ) 
+     }   
   }
   modalHide()
 }
@@ -46,7 +49,7 @@ var saveGame = function() {
 var loadGame = function() {
   var name = document.getElementById('save-input').value
   var load = localStorage.getItem(name)  
-  board = JSON.parse(load)
+  board = JSON.parse(load).boardToSave
   modalHide()
   init()  
 }

@@ -87,7 +87,7 @@ table {
 }
 
 .board button.selected {
-  background: radial-gradient(#2b4869, #000000);
+  background: radial-gradient(#2b4869, #000000); 
   border: 1px solid #000000;
 }
 
