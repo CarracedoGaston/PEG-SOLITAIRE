@@ -36,15 +36,17 @@ var generateLeaderboard = function() {
   var keys = Object.keys(localStorage)
   var list = []
   for (var i = 0; i < keys.length; i++) {
-    list.push({name: keys[i], score: playerScore(playerBoard(keys[i]))})
+    list.push({name: keys[i], score: playerScore(playerBoard(keys[i])), date: JSON.parse(localStorage.getItem(keys[i])).dateToSave})
   }
   list.sort(majortoMinor)
-  list.splice(5)
+  list.splice(10)
   for(var i = 0; i < list.length; i++) {
     var htmlName = document.getElementById('leader-name-' + i)
     var htmlScore = document.getElementById('leader-score-' + i)
+    var htmlDate = document.getElementById('leader-date-' + i)
     htmlName.innerHTML = list[i].name
     htmlScore.innerHTML = list[i].score
+    htmlDate.innerHTML = list[i].date
   }
 }
 

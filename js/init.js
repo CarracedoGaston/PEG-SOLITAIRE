@@ -23,6 +23,7 @@ var init = function () {
   var modalHide = document.getElementById('cancel')
   var modalAcceptSave = document.getElementById('accept-save')
   var modalAcceptLoad = document.getElementById('accept-load')
+  var allScoreButton = document.getElementById('all-score')
   boardElement.innerHTML = generateBoard()
   generateLeaderboard()
   score.innerHTML = playerScore(board)
@@ -34,6 +35,7 @@ var init = function () {
   hideModalEventHandlers(modalHide)
   addSaveEventHandlers(modalAcceptSave)
   addLoadGameEventHandlers(modalAcceptLoad)
+  allScoresButton(allScoreButton)
   winnerResetBoard()
 }
 
