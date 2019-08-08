@@ -26,6 +26,10 @@ var saveGame = function() {
   var boardDate = JSON.stringify(objectBoardDate)
   var name = document.getElementById('save-input').value
   //validation of a name alphanumeric, between 3 and 5 characters long
+  if(name == "") {
+    alert('Please insert your name')
+    return
+  }
   if ((name.length > 5) || (name.length < 3)  || (!name.match(/^([0-9]|[a-z])+([0-9a-z]+)$/i))) {
     alert('The name could be alphanumeric, and must be between 3 and 6 characters long')
     return
